@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#login-page {
+    display: flex;
+    margin-top: 1rem;
+}
+
+#login-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 8.5rem;
+    margin-left: 10rem;
+    gap: 3rem;
+
+}
+
+
+
+#name {
+    width: 30vw;
+    height: 2rem;
+    border: 1px solid blueviolet;
+    outline: none;
+
+}
+
+#email {
+    width: 30vw;
+    height: 2rem;
+    border: 1px solid blueviolet;
+    outline: none;
+
+}
+
+#password {
+    width: 30vw;
+    height: 2rem;
+    border: 1px solid blueviolet;
+    outline: none;
+
+
+}
+
+#confirm-password {
+    width: 30vw;
+    height: 2rem;
+    border: 1px solid blueviolet;
+    outline: none;
+}
+
+#login-button {
+    width: 30vw;
+    height: 2rem;
+    background-color: blueviolet;
+    color: white;
+    font-size: 1.1rem;
+    font-family: 'Hammersmith One', sans-serif;
+
+}
+
+#guest-login-button {
+    width: 30vw;
+    height: 2rem;
+    background-color: blueviolet;
+    color: white;
+    font-size: 1.1rem;
+    margin-top: -1rem;
+    font-family: 'Hammersmith One', sans-serif;
+
+}
+
+#dont-have-account {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    font-family: 'Hammersmith One', sans-serif;
+    margin-top: -1rem;
+
+}
+
+#signup-link {
+    color: blueviolet;
+    font-size: 1.1rem;
+}
+
+#login-link {
+    color: blueviolet;
+    font-size: 1.1rem;
+}
+
+
+::placeholder {
+    padding: 3px;
+}
+
+input {
+    caret-color: blueviolet;
+    padding: 3px;
+}
+
+/* design for mobile */
+@media (max-width:480px) {
+    #login-svg-image {
+        display: none;
+    }
+
+    #login-form {
+        display: flex;
+        flex-direction: column;
+        transform: translate(50%);
+        margin-top: 6em;
+        margin-left: 0rem;
+        gap: 4rem;
+
+    }
+}
+
+/* design for small tablet */
+@media (max-width:769px) {
+    #login-svg-image {
+        display: none;
+    }
+
+    #login-form {
+        display: flex;
+        flex-direction: column;
+        transform: translate(100%);
+        margin-top: 6rem;
+        margin-left: 0rem;
+        gap: 4rem;
+
+    }
+
+    #email {
+        width: 40vw;
+        height: 2rem;
+        border: 1px solid blueviolet;
+        outline: none;
+    }
+
+    #password {
+        width: 40vw;
+        height: 2rem;
+        border: 1px solid blueviolet;
+        outline: none;
+
+
+    }
+
+    #login-button {
+        width: 40vw;
+        height: 2rem;
+        background-color: blueviolet;
+        color: white;
+        font-size: 1.1rem;
+        font-family: 'Hammersmith One', sans-serif;
+
+    }
+
+    #guest-login-button {
+        width: 40vw;
+        height: 2rem;
+        background-color: blueviolet;
+        color: white;
+        font-size: 1.1rem;
+        margin-top: -2rem;
+        font-family: 'Hammersmith One', sans-serif;
+
+    }
+
+
+
+}
+
+/* design for large tablet */
+@media (max-width:1024px) {
+    #login-svg-image {
+        display: none;
+    }
+
+    #login-form {
+        display: flex;
+        flex-direction: column;
+        transform: translate(40%);
+        margin-top: 5rem;
+        margin-left: 0rem;
+        gap: 4rem;
+
+    }
+
+    #email {
+        width: 60vw;
+        height: 2rem;
+        border: 1px solid blueviolet;
+        outline: none;
+    }
+
+    #password {
+        width: 60vw;
+        height: 2rem;
+        border: 1px solid blueviolet;
+        outline: none;
+
+
+    }
+
+    #login-button {
+        width: 60vw;
+        height: 2rem;
+        background-color: blueviolet;
+        color: white;
+        font-size: 1.1rem;
+        font-family: 'Hammersmith One', sans-serif;
+
+    }
+
+    #guest-login-button {
+        width: 60vw;
+        height: 2rem;
+        background-color: blueviolet;
+        color: white;
+        font-size: 1.1rem;
+        margin-top: -2rem;
+        font-family: 'Hammersmith One', sans-serif;
+
+    }
+
+}

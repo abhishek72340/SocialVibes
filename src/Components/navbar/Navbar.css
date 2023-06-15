@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#socialvibes-logo {
+    font-size: 2rem;
+    margin-left: 4rem;
+    font-weight: bold;
+    font-family: 'Hammersmith One', sans-serif;
+}
+
+#social {
+    color: blueviolet;
+
+}
+
+/* #vibes{
+  
+} */
+
+#search-field {
+    width: 30vw;
+    height: 2rem;
+    padding: 5px;
+    border: 1px solid black;
+    outline: none;
+}
+
+#navbar-theme {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 1;
+}
+
+@media (max-width:480px){
+    html{
+        font-size: 7px;
+    }
+    #socialvibes-logo {
+        font-size: 1.2rem;
+        margin-left: 1rem;
+        font-weight: bold;
+        font-family: 'Hammersmith One', sans-serif;
+    }
+}
+@media (max-width:769px){
+    #socialvibes-logo {
+        font-size: 1.4rem;
+        margin-left: 1rem;
+        font-weight: bold;
+        font-family: 'Hammersmith One', sans-serif;
+    }
+}
+@media (max-width:1024px){
+    #socialvibes-logo {
+        font-size: 1.4rem;
+        margin-left: 1rem;
+        font-weight: bold;
+        font-family: 'Hammersmith One', sans-serif;
+    }
+}

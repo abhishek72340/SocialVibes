@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#post-theme {
+    display: flex;
+    justify-content: center;
+}
+
+#post-theme-data {
+    display: flex;
+    justify-content: center;
+    width: 40vw;
+    height: 100vh;
+    /* border: 1px solid black; */
+    
+}
