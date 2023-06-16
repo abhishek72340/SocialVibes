@@ -32,8 +32,8 @@ export default function LeftSideBar() {
         </div>
         <div id='profile-highlight'>
           <span ><img src={me} alt="img" id='profile-picture' /></span>
-          <span id='profile-name'>Abhishek Singh</span>
-          <span style={{ marginLeft: '-6.5rem', marginTop: "1rem", fontSize: '11px' }} id='profile-username'>@abhisheksingh</span>
+          <span id='profile-name'>Abhishek</span>
+          <span style={{ marginLeft: '-4.3rem', marginTop: "1rem", fontSize: '11px' }} id='profile-username'>@abhishek</span>
         </div>
       </div>
 
