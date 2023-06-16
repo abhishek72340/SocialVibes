@@ -15,6 +15,8 @@ const AuthProvider = ({ children }) => {
     //Signup-State//
     const [userData, setUserData] = useState({
         firstName: "",
+        lastName: "",
+        email: "",
         username: "",
         password: "",
         confirmPassword: "",
@@ -77,9 +79,11 @@ const AuthProvider = ({ children }) => {
     };
 
     //Signup FUnction//
+    let name;
+    let value;
     const signupInputChange = (e) => {
-        const name = e.target.name
-        const value = e.target.value
+        name=e.target.name
+        value= e.target.value
         setUserData({ ...userData, [name]: value })
     };
 
@@ -89,7 +93,9 @@ const AuthProvider = ({ children }) => {
         if (userData.password === userData.confirmPassword) {
             try {
                 const { data } = await axios.get('/api/auth/signup', {
-                    name: userData.firstName,
+                    firstName: userData.firstName,
+                    lastName: userData.lastName,
+                    email: userData.email,
                     username: userData.username,
                     password: userData.password,
                     confirmPassword: userData.confirmPassword,
