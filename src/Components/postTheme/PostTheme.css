@@ -25,6 +25,7 @@
     box-shadow: 1px 1px 6px lightgray;
 
 }
+
 #profile-add {
     display: flex;
     gap: 1rem;
@@ -54,9 +55,25 @@
     position: absolute;
     display: flex;
     margin-top: 9rem;
-    font-size: 1.3rem;
-    gap: 1rem;
+    font-size: 1.1rem;
     margin-left: 1rem;
+    gap: 23rem;
     cursor: pointer;
 
+
+}
+
+#post-icon {
+    display: flex;
+    gap: 1rem;
+}
+
+#post-theme-post-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.5rem;
+    height: 1.4rem;
+    background-color: blueviolet;
+    color: white;
 }

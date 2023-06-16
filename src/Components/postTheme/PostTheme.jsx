@@ -10,8 +10,11 @@ export default function PostTheme() {
         <div id='add-post-block'>
 
           <div id='add-post-icons'>
+            <div id='post-icon'>
             <span><MdPhotoSizeSelectActual /></span>
             <span><BsEmojiSmileFill /></span>
+            </div>
+            <span id='post-theme-post-button'>Post</span>
           </div>
 
           <div id='profile-add'>
