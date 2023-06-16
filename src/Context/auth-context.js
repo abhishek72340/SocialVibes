@@ -11,7 +11,17 @@ const AuthProvider = ({ children }) => {
         password: ''
     });
 
+    //Signup-State//
+    const [userData, setUserData] = useState({
+        firstName: "",
+        username: "",
+        password: "",
+        confirmPassword: "",
+    });
+
     const navigate = useNavigate();
+
+    //Login Function//
     const dummyUser = {
         username: "@abhishek",
         password: "abhishek123",
@@ -31,6 +41,7 @@ const AuthProvider = ({ children }) => {
     //Login API//
     const loginHandler = async (e) => {
         e.preventDefault();
+
         try {
             let { data, status } = await axios.post("/api/auth/login", {
                 username: userDetails.username,
@@ -62,32 +73,63 @@ const AuthProvider = ({ children }) => {
         }
     };
 
-    //Signup API//
-    
-
-    // Logout function//
-    const userLogout = () => {
-        localStorage.removeItem('token')
-        navigate('/login')
+    //Signup FUnction//
+    const signupInputChange = (e) => {
+        const name = e.target.name
+        const value = e.target.value
+        setUserData({ ...userData, [name]: value })
     };
 
+    //Signup API//
+    const signupHandler = async (e) => {
+        e.preventDefault();
+        if (userData.password === userData.confirmPassword) {
+            try {
+                const { data } = await axios.get('/api/auth/signup', {
+                    name: userData.firstName,
+                    username: userData.username,
+                    password: userData.password,
+                    confirmPassword: userData.confirmPassword,
 
-    // useEffect(() => {
-    //     let token = localStorage.getItem("socialvibes");
-    //     if (token) {
-    //         setUserToken(token);
-    //         setDetail(JSON.parse(localStorage.getItem("foundUser")));
-
-    //     }
-    // }, [userToken]);
-
+                })
+                localStorage.setItem('token',JSON.stringify(data.encodedToken))
+                localStorage.setItem('foundUser',JSON.stringify(data.createdUser))
+                navigate('/')
+            }
+            catch (error) {
+                alert(error)
+            }
+        }else{
+            alert('doest not match')
+        }
+    }
   
 
-    return (
-        <authContext.Provider value={{ userLogout, userToken, detail, loginHandler, LoginDataHandler, userDetails, applyDummyData }}>
-            {children}
-        </authContext.Provider>
-    )
-}
-const useAuth = () => useContext(authContext)
-export { useAuth, AuthProvider }
+
+
+        // Logout function//
+        const userLogout = () => {
+            localStorage.removeItem('token')
+            navigate('/login')
+        };
+
+
+        // useEffect(() => {
+        //     let token = localStorage.getItem("socialvibes");
+        //     if (token) {
+        //         setUserToken(token);
+        //         setDetail(JSON.parse(localStorage.getItem("foundUser")));
+
+        //     }
+        // }, [userToken]);
+
+
+
+        return (
+            <authContext.Provider value={{userData, signupInputChange, signupHandler, userLogout, userToken, detail, loginHandler, LoginDataHandler, userDetails, applyDummyData }}>
+                {children}
+            </authContext.Provider>
+        )
+    }
+    const useAuth = () => useContext(authContext)
+    export { useAuth, AuthProvider }

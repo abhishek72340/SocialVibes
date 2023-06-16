@@ -10,7 +10,7 @@ import Signup from "./Pages/signup/Signup";
 import Error from "./Pages/error/Error";
 import PrivatePage from './Pages/privatePage/PrivatePage';
 // import { ToastContainer } from 'react-toastify';
-import { Navigate } from "react-router-dom";
+
 function App() {
   return (
     <>
