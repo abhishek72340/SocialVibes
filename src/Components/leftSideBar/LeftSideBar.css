@@ -12,8 +12,7 @@
     height: 100vh;
     position: fixed;
     left: 0;
-   top:3.5rem
-
+    top: 3.5rem
 }
 
 #left-sidebar-data {
@@ -77,35 +76,7 @@
     display: none;
 }
 
-
-/* bottom navbar */
-#bottom-nav{
-position: fixed;
-bottom: 0;
-background-color:white;
-width: 100vw;
-height: 2rem;
-
-}
-#navbar{
-    display: flex;
-    justify-content: space-around;
-    font-size: 1.2rem;
-    margin-top: 0.5rem;
-    color: blueviolet;
-    
-
-}
-#bottom-profile-picture{
-    width: 1.5rem;
-    height: 1.5rem;
-    border-radius: 50%;
-}
-#bottom-nav-post-button{
-    color: blueviolet;
-    font-size: 1.6rem;
-}
-
+/* design for mobile */
 @media (max-width:480px) {
 
 
@@ -114,6 +85,7 @@ height: 2rem;
     }
 }
 
+/* design for small tablet */
 @media (max-width:769px) {
     .left-sidebar-link {
         display: none;
@@ -147,12 +119,13 @@ height: 2rem;
     }
 }
 
+/* design for tablet */
 @media (max-width:1024px) {
     #left-sidebar-link {
         display: none;
     }
 
-  
+
 
     #left-sidebar-data {
         display: flex;
@@ -205,10 +178,5 @@ height: 2rem;
         display: block;
         font-size: 12px;
         margin-top: 0.5rem;
-    }
-}
-@media (min-width:769px){
-    #bottom-nav{
-        display: none;
     }
 }

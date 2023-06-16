@@ -29,7 +29,13 @@
     width: 100%;
     height: 80%;
 }
-
+#explore-post-icon{
+    display: flex;
+    font-size: 1.3rem;
+    gap:2rem;
+    padding: 1rem;
+    cursor: pointer;
+}
 /* design for mobile */
 @media(max-width:480px) {
     #explore-card {

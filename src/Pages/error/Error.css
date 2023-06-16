@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+box-sizing: border-box;
+}
+
+#error-number{
+    font-size: 4rem;
+}
+#error{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: blueviolet;
+    font-size: 2rem;
+    font-family: 'Hammersmith One', sans-serif;
+    flex-direction: column;
+    height: 100vh;
+    font-weight: bold;
+}

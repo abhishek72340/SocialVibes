@@ -7,12 +7,14 @@ import Favourite from "./Pages/favourite/Favourite";
 import Explore from "./Pages/explore/Explore";
 import Login from "./Pages/login/Login";
 import Signup from "./Pages/signup/Signup";
+import Error from "./Pages/error/Error";
+// import { ToastContainer } from 'react-toastify';
 
 function App() {
   return (
     <>
       
-     
+      {/* <ToastContainer /> */}
       <Routes>
         <Route path='/mockman' element={<Mockman />} />
         <Route path='/' element={< Main />} />
@@ -21,6 +23,7 @@ function App() {
         <Route path='/explore' element={<Explore />} />
         <Route path='/login' element={<Login />} />
         <Route path='/signup' element={<Signup />} />
+        <Route path='*' element={<Error/>} />
 
       </Routes>
 

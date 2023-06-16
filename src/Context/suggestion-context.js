@@ -9,7 +9,7 @@ const SuggestionProvider = ({ children }) => {
         try {
             const {data} = await axios.get('/api/users')
             setSuggestUser(data.users)
-            // console.log(response)
+        
         }
         catch (error) {
             alert(error)

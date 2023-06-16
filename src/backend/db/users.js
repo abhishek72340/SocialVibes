@@ -8,10 +8,10 @@ import { formatDate } from "../utils/authUtils";
 export const users = [
   // {
   //   _id: "t7cZfWIp-q",
-  //   firstName: "Abhishek Singh ",
-  //   lastName: "Rana",
-  //   username: "abhisheksingh",
-  //   password: "abhisheksingh123",
+  //   firstName: "Abhishek  ",
+  //   lastName: "",
+  //   username: "@abhishek",
+  //   password: "abhishek123",
   //   bio: "Be yourself!",
   //   bookmarks: [],
   //   avatarUrl:
@@ -63,17 +63,17 @@ export const users = [
   },
 
   {
-    _id: "o5gzWjEeX_",
-    firstName: "Abhishek",
+    _id: "t7cZfWIp-q",
+    firstName: "Abhishek  ",
     lastName: "",
-    username: "@abhishek ",
+    username: "@abhishek",
     password: "abhishek123",
-    bio: "Aspiring Frontend Engineer",
+    bio: "Be yourself!",
     bookmarks: [],
     avatarUrl:
       "https://pbs.twimg.com/profile_images/1648635693932122115/W12SFpGW_400x400.jpg",
-    website: "https://hashnode.com/edit/cl8m3ky6m000c09mjbxe2gpsb",
-    createdAt: "2023-06-04T10:55:06+05:30",
+    website: "https://abhishek-singh-rana.netlify.app/",
+    createdAt: "2023-06-01T10:55:06+05:30",
     updatedAt: formatDate(),
   },
 
