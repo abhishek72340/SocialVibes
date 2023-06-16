@@ -28,7 +28,7 @@
 
 #profile-add {
     display: flex;
-    gap: 1rem;
+    gap: 5px;
 }
 
 #add-post-input-filed {

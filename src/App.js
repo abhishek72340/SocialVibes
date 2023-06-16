@@ -9,13 +9,12 @@ import Login from "./Pages/login/Login";
 import Signup from "./Pages/signup/Signup";
 import Error from "./Pages/error/Error";
 import PrivatePage from './Pages/privatePage/PrivatePage';
-// import { ToastContainer } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   return (
     <>
-
-      {/* <ToastContainer /> */}
+      <ToastContainer />
       <Routes>
 
         <Route element={<PrivatePage />} >

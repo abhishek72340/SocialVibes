@@ -1,6 +1,7 @@
 import { createContext, useContext, useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { useToast } from '../Context/toastify-context';
 const authContext = createContext();
 
 const AuthProvider = ({ children }) => {
@@ -20,6 +21,7 @@ const AuthProvider = ({ children }) => {
     });
 
     const navigate = useNavigate();
+    const { notifySuccess, notifyError } = useToast();
 
     //Login Function//
     const dummyUser = {
@@ -56,19 +58,20 @@ const AuthProvider = ({ children }) => {
                 localStorage.setItem("foundUser", JSON.stringify(data.foundUser));
                 setUserToken(data.encodedToken);
                 setDetail(data.foundUser);
-                console.log("Login Successfully");
+
             }
             if (data) {
                 navigate('/')
+                notifySuccess('login successfully')
             }
         }
         catch (err) {
             console.log(err);
             if (err.response.status === 404) {
-                console.log("User not found");
+                notifyError("User not found");
             }
             else if (err.response.status === 401) {
-                console.log("Invalid Credential");
+                notifyError("Invalid Credential");
             }
         }
     };
@@ -92,44 +95,47 @@ const AuthProvider = ({ children }) => {
                     confirmPassword: userData.confirmPassword,
 
                 })
-                localStorage.setItem('token',JSON.stringify(data.encodedToken))
-                localStorage.setItem('foundUser',JSON.stringify(data.createdUser))
-                navigate('/')
+                localStorage.setItem('token', JSON.stringify(data.encodedToken))
+                localStorage.setItem('foundUser', JSON.stringify(data.createdUser))
+               
+                if(data){
+                    navigate('/')
+                    notifySuccess('signup successfully')
+                }
             }
+           
             catch (error) {
-                alert(error)
+                notifyError(error)
             }
-        }else{
-            alert('doest not match')
+
+        } else {
+            notifyError('password does not match')
         }
     }
-  
+
+    // Logout function//
+    const userLogout = () => {
+        localStorage.removeItem('token')
+        navigate('/login')
+        notifySuccess('logout successfully')
+    };
+
+    // useEffect(() => {
+    //     let token = localStorage.getItem("socialvibes");
+    //     if (token) {
+    //         setUserToken(token);
+    //         setDetail(JSON.parse(localStorage.getItem("foundUser")));
+
+    //     }
+    // }, [userToken]);
 
 
 
-        // Logout function//
-        const userLogout = () => {
-            localStorage.removeItem('token')
-            navigate('/login')
-        };
-
-
-        // useEffect(() => {
-        //     let token = localStorage.getItem("socialvibes");
-        //     if (token) {
-        //         setUserToken(token);
-        //         setDetail(JSON.parse(localStorage.getItem("foundUser")));
-
-        //     }
-        // }, [userToken]);
-
-
-
-        return (
-            <authContext.Provider value={{userData, signupInputChange, signupHandler, userLogout, userToken, detail, loginHandler, LoginDataHandler, userDetails, applyDummyData }}>
-                {children}
-            </authContext.Provider>
-        )
-    }
-    const useAuth = () => useContext(authContext)
-    export { useAuth, AuthProvider }
+    return (
+        <authContext.Provider value={{ userData, signupInputChange, signupHandler, userLogout, userToken, detail, loginHandler, LoginDataHandler, userDetails, applyDummyData }}>
+            {children}
+        </authContext.Provider>
+    )
+}
+const useAuth = () => useContext(authContext)
+export { useAuth, AuthProvider }
