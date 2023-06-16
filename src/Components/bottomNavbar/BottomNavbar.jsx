@@ -26,3 +26,5 @@ export default function BottomNavbar() {
     </div>
   )
 }
+
+/////hello
