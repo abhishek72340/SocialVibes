@@ -3,6 +3,7 @@ import './LeftSideBar.css'
 import { NavLink } from 'react-router-dom';
 import BottomNavbar from '../bottomNavbar/BottomNavbar'
 import { PostModal } from '../modal/PostModal';
+import { useAuth } from '../../Context/auth-context';
 import { AiOutlineHome } from 'react-icons/ai';
 import { MdExplore } from 'react-icons/md';
 import { BsBookmarks } from 'react-icons/bs';
@@ -12,6 +13,8 @@ import { AiFillPlusCircle } from 'react-icons/ai';
 import me from '../../images/me.jpg'
 
 export default function LeftSideBar() {
+const {userLogout}=useAuth();
+
   const getActiveStyle = ({ isActive }) => ({
     color: isActive ? 'blueviolet' : '',
 
@@ -25,7 +28,7 @@ export default function LeftSideBar() {
             <NavLink to='/explore' style={getActiveStyle}><div className='left-sidebar-data-icon'><span className='left-sidebar-icon'><MdExplore /></span><span className='left-sidebar-link'>Explore</span></div></NavLink>
             <NavLink to='/bookmark' style={getActiveStyle}><div className='left-sidebar-data-icon'><span className='left-sidebar-icon'><BsBookmarks /></span><span className='left-sidebar-link'>Bookmarks</span></div></NavLink>
             <NavLink to='/favourite' style={getActiveStyle}><div className='left-sidebar-data-icon'><span className='left-sidebar-icon'><AiOutlineHeart /></span><span className='left-sidebar-link'>Favourites</span></div></NavLink>
-            <NavLink to='/login' style={getActiveStyle}><div className='left-sidebar-data-icon'><span className='left-sidebar-icon'><FiLogOut /></span><span className='left-sidebar-link'>Logout</span></div></NavLink>
+            <NavLink to='/login' style={getActiveStyle}><div className='left-sidebar-data-icon' onClick={userLogout}><span className='left-sidebar-icon'><FiLogOut /></span><span className='left-sidebar-link'>Logout</span></div></NavLink>
             <span id='left-sidebar-post'><PostModal /></span>
             <div id='add-post-button'><AiFillPlusCircle /></div>
           </div>
