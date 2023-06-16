@@ -82,8 +82,8 @@ const AuthProvider = ({ children }) => {
     let name;
     let value;
     const signupInputChange = (e) => {
-        name=e.target.name
-        value= e.target.value
+        name = e.target.name
+        value = e.target.value
         setUserData({ ...userData, [name]: value })
     };
 
@@ -92,7 +92,7 @@ const AuthProvider = ({ children }) => {
         e.preventDefault();
         if (userData.password === userData.confirmPassword) {
             try {
-                const { data } = await axios.get('/api/auth/signup', {
+                const { data } = await axios.post('/api/auth/signup', {
                     firstName: userData.firstName,
                     lastName: userData.lastName,
                     email: userData.email,
@@ -100,18 +100,16 @@ const AuthProvider = ({ children }) => {
                     password: userData.password,
                     confirmPassword: userData.confirmPassword,
 
-                })
+                });
                 console.log(data)
                 localStorage.setItem('token', JSON.stringify(data.encodedToken))
                 localStorage.setItem('foundUser', JSON.stringify(data.createdUser))
-             
-               
-                if(data){
+
+                if (data) {
                     navigate('/')
                     notifySuccess('signup successfully')
                 }
             }
-           
             catch (error) {
                 notifyError(error)
             }
@@ -127,17 +125,6 @@ const AuthProvider = ({ children }) => {
         navigate('/login')
         notifySuccess('logout successfully')
     };
-
-    // useEffect(() => {
-    //     let token = localStorage.getItem("socialvibes");
-    //     if (token) {
-    //         setUserToken(token);
-    //         setDetail(JSON.parse(localStorage.getItem("foundUser")));
-
-    //     }
-    // }, [userToken]);
-
-
 
     return (
         <authContext.Provider value={{ userData, signupInputChange, signupHandler, userLogout, userToken, detail, loginHandler, LoginDataHandler, userDetails, applyDummyData }}>

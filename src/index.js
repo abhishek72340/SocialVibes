@@ -18,15 +18,15 @@ ReactDOM.render(
     <BrowserRouter>
       <ToastProvider>
         <ChakraProvider>
-          <BookmarkProvider>
             <ExploreProvider>
+          <BookmarkProvider>
               <SuggestionProvider>
                 <AuthProvider>
                   <App />
                 </AuthProvider>
               </SuggestionProvider>
-            </ExploreProvider>
           </BookmarkProvider>
+            </ExploreProvider>
         </ChakraProvider>
       </ToastProvider>
     </BrowserRouter>

@@ -14,8 +14,8 @@ export default function Login() {
         <div id='login-form-container'>
 
           <form id='login-form' onSubmit={loginHandler}>
-            <input type="text" id='username' placeholder='username' value={userDetails.username}  onChange={LoginDataHandler}  required />
-            <input type="password" id='password' placeholder='password' value={userDetails.password}  onChange={LoginDataHandler}  required />
+            <input type="text" className='input-field' placeholder='username' value={userDetails.username}  onChange={LoginDataHandler}  required />
+            <input type="password" className='input-field' placeholder='password' value={userDetails.password}  onChange={LoginDataHandler}  required />
             <button type='submit' id='login-button'>Login</button>
             <button id='guest-login-button' onClick={applyDummyData}>Login as a guest</button>
             <div id='dont-have-account'> <span>Don't have an account? </span><Link to='/signup' id='login-link'>Signup</Link></div>

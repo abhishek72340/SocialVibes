@@ -15,55 +15,13 @@
     margin-top: 8.5rem;
     margin-left: 10rem;
     gap: 3rem;
-
 }
-
-
-
-#firstname {
+.input-field {
     width: 30vw;
     height: 2rem;
     border: 1px solid blueviolet;
     outline: none;
 
-}
-#lastname {
-    width: 30vw;
-    height: 2rem;
-    border: 1px solid blueviolet;
-    outline: none;
-
-}
-#email {
-    width: 30vw;
-    height: 2rem;
-    border: 1px solid blueviolet;
-    outline: none;
-
-}
-
-#username {
-    width: 30vw;
-    height: 2rem;
-    border: 1px solid blueviolet;
-    outline: none;
-
-}
-
-#password {
-    width: 30vw;
-    height: 2rem;
-    border: 1px solid blueviolet;
-    outline: none;
-
-
-}
-
-#confirm-password {
-    width: 30vw;
-    height: 2rem;
-    border: 1px solid blueviolet;
-    outline: none;
 }
 
 #login-button {
@@ -149,22 +107,14 @@ input {
 
     }
 
-    #email {
+    .input-field {
         width: 40vw;
         height: 2rem;
         border: 1px solid blueviolet;
         outline: none;
     }
 
-    #password {
-        width: 40vw;
-        height: 2rem;
-        border: 1px solid blueviolet;
-        outline: none;
-
-
-    }
-
+ 
     #login-button {
         width: 40vw;
         height: 2rem;
@@ -185,9 +135,6 @@ input {
         font-family: 'Hammersmith One', sans-serif;
 
     }
-
-
-
 }
 
 /* design for large tablet */
@@ -206,21 +153,14 @@ input {
 
     }
 
-    #email {
+    .input-field{
         width: 60vw;
         height: 2rem;
         border: 1px solid blueviolet;
         outline: none;
     }
 
-    #password {
-        width: 60vw;
-        height: 2rem;
-        border: 1px solid blueviolet;
-        outline: none;
-
-
-    }
+  
 
     #login-button {
         width: 60vw;
