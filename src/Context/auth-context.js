@@ -101,8 +101,10 @@ const AuthProvider = ({ children }) => {
                     confirmPassword: userData.confirmPassword,
 
                 })
+                console.log(data)
                 localStorage.setItem('token', JSON.stringify(data.encodedToken))
                 localStorage.setItem('foundUser', JSON.stringify(data.createdUser))
+             
                
                 if(data){
                     navigate('/')

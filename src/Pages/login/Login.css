@@ -20,7 +20,21 @@
 
 
 
-#name {
+#firstname {
+    width: 30vw;
+    height: 2rem;
+    border: 1px solid blueviolet;
+    outline: none;
+
+}
+#lastname {
+    width: 30vw;
+    height: 2rem;
+    border: 1px solid blueviolet;
+    outline: none;
+
+}
+#email {
     width: 30vw;
     height: 2rem;
     border: 1px solid blueviolet;
