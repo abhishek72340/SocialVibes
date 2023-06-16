@@ -28,7 +28,7 @@ export default function Explore() {
                   <div key={data._id} id='explore-card'>
                     <div id='explore-data'>
                       <span>{data.content}</span>
-                      <span><img src={data.mediaURL} alt='img' id='post-media' /></span>
+                      <span><img src={data.mediaURL} alt='profile' id='post-media' /></span>
                       <div id='explore-post-icon'>
                         <span><AiOutlineLike /></span>
                         <span onClick={() => addBookmarkPost(data._id)}><CiBookmark /></span>

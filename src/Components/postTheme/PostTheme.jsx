@@ -15,7 +15,7 @@ export default function PostTheme() {
           </div>
 
           <div id='profile-add'>
-            <span><img src={me} alt="img" id='add-post-profile' /></span>
+            <span><img src={me} alt="prifle" id='add-post-profile' /></span>
             <textarea placeholder='whats happening' id="add-post-input-filed" cols="30" rows="10"></textarea>
           </div>
           
