@@ -20,11 +20,9 @@ export default function BottomNavbar() {
           <NavLink><AiOutlineHeart /></NavLink>
           <NavLink><FiLogOut /></NavLink>
           
-          <span ><img src={me} alt="img" id='bottom-profile-picture' /></span>
+          <span ><img src={me} alt="profile" id='bottom-profile-picture' /></span>
         </nav>
       </div>
     </div>
   )
 }
-
-/////hello
