@@ -4,11 +4,14 @@ const exploreContext = createContext();
 
 const ExploreProvider = ({ children }) => {
     const [explorePost, setExplorePost] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
+
 
     const getExplorePost = async () => {
         try {
             const { data } = await axios.get('/api/posts')
             setExplorePost(data.posts)
+            setIsLoading(false)
 
         }
         catch (error) {
@@ -20,7 +23,7 @@ const ExploreProvider = ({ children }) => {
     }, [])
 
     return (
-        <exploreContext.Provider value={{ explorePost }}>
+        <exploreContext.Provider value={{ explorePost,isLoading }}>
             {children}
         </exploreContext.Provider>
     )

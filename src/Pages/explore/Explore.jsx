@@ -5,9 +5,11 @@ import Navbar from '../../Components/navbar/Navbar'
 import LeftSideBar from "../../Components/leftSideBar/LeftSideBar";
 import RightSideBar from "../../Components/rightSideBar/RightSideBar";
 import { useExplore } from '../../Context/explore-context'
+import { Spinner } from '@chakra-ui/react'
 
 export default function Explore() {
-  const { explorePost } = useExplore();
+  const { explorePost, isLoading } = useExplore();
+
   return (
     <div>
       <span> <Navbar style={{ position: 'sticky' }} /></span>
@@ -18,7 +20,16 @@ export default function Explore() {
         <div id='explore-theme-data'>
           <div >
             {
-              explorePost.map((data) => <ExploreCard data={data} />)
+              isLoading ? <span id='explore-loading'>
+                {<Spinner
+                  thickness='4px'
+                  speed='0.65s'
+                  emptyColor='gray.200'
+                  color='blue.500'
+                  size='xl'
+                />}
+              </span> :
+                explorePost.map((data) => <ExploreCard data={data} />)
             }
           </div>
         </div>

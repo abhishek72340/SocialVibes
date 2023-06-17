@@ -1,13 +1,30 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-#bookmark-theme{
+
+#bookmark-theme {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+
+    margin-top: 5rem;
+}
+
+#bookmark-card {
+    width: 42vw;
+    box-shadow: 1px 1px 5px lightgray;
+    margin-left: -2.5rem;
+}
+
+#no-bookmark {
     display: flex;
     justify-content: center;
     color: blueviolet;
     font-size: 2rem;
-     margin-top: 5rem;
-   font-family: 'Hammersmith One', sans-serif;
-    }
+    margin-top: 5rem;
+    font-family: 'Hammersmith One', sans-serif;
+}

@@ -5,7 +5,7 @@ const toastContext = createContext();
 const ToastProvider = ({ children }) => {
  
     const toastify = {
-        position: "top-center",
+        position: "top-left",
         autoClose: 800,
         hideProgressBar: false,
         closeOnClick: true,

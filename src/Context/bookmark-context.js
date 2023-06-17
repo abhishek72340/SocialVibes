@@ -1,26 +1,29 @@
-import { createContext, useContext, useState, useEffect } from 'react';
+import { createContext, useContext, useState } from 'react';
 import axios from 'axios';
+import { useToast } from '../Context/toastify-context';
 const bookmarkContext = createContext();
 
 const BookmarkProvider = ({ children }) => {
-    const [bookmarkPost,setBookmarkPost]=useState([]);
-
-    const addBookmarkPost = async(postId)=>{
-        const token=localStorage.getItem('token')
-        try{
-            const {data}=await axios.post(`/api/users/bookmark/${postId}`,{},{
-            headers:{authorization: token},
-                   
-        });
-        console.log(data)
+    const [bookmarkPost, setBookmarkPost] = useState([]);
+    const { notifyError,notifySuccess } = useToast();
+    const addBookmarkPost = async (postId) => {
+        const token = localStorage.getItem('token')
+        try {
+            const { data } = await axios.post(`/api/users/bookmark/${postId}`, {}, {
+                headers: { authorization: token },
+            });
+            console.log(data)
             setBookmarkPost(data.bookmarks)
+            notifySuccess('added successfully')
+         
         }
-        catch(error){
-            alert(error)
+        catch (error) {
+            notifyError(error)
         }
-    }
+    };
+
     return (
-        <bookmarkContext.Provider value={{bookmarkPost,addBookmarkPost}}>
+        <bookmarkContext.Provider value={{ bookmarkPost, addBookmarkPost }}>
             {children}
         </bookmarkContext.Provider>
     )

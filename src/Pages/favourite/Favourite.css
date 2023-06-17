@@ -1,14 +1,15 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-#favourite-theme{
-       display: flex;
+
+#favourite-theme {
+    display: flex;
     justify-content: center;
     color: blueviolet;
     font-size: 2rem;
-    margin-top: 5rem;
+    margin-top: 10rem;
     font-family: 'Hammersmith One', sans-serif;
- 
+
 }

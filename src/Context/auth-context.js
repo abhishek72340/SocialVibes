@@ -63,8 +63,8 @@ const AuthProvider = ({ children }) => {
 
             }
             if (data) {
-                navigate('/')
-                notifySuccess('login successfully')
+                navigate('welcome')
+               
             }
         }
         catch (err) {
@@ -106,8 +106,8 @@ const AuthProvider = ({ children }) => {
                 localStorage.setItem('foundUser', JSON.stringify(data.createdUser))
 
                 if (data) {
-                    navigate('/')
-                    notifySuccess('signup successfully')
+                    navigate('/welcome')
+                   
                 }
             }
             catch (error) {
