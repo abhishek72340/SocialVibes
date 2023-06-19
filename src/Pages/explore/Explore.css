@@ -42,8 +42,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 5rem;
+    margin-top: 10rem;
+    margin-left: 12rem;
     color: blueviolet;
+  
    }
 /* design for mobile */
 @media(max-width:480px) {

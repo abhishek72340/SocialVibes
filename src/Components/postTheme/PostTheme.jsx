@@ -11,8 +11,8 @@ export default function PostTheme() {
 
           <div id='add-post-icons'>
             <div id='post-icon'>
-            <span><MdPhotoSizeSelectActual /></span>
-            <span><BsEmojiSmileFill /></span>
+              <span><MdPhotoSizeSelectActual /></span>
+              <span><BsEmojiSmileFill /></span>
             </div>
             <span id='post-theme-post-button'>Post</span>
           </div>
@@ -21,7 +21,7 @@ export default function PostTheme() {
             <span><img src={me} alt="prifle" id='add-post-profile' /></span>
             <textarea placeholder='whats happening' id="add-post-input-filed" cols="30" rows="10"></textarea>
           </div>
-          
+
         </div>
       </div>
     </div>

@@ -28,8 +28,7 @@ export default function Explore() {
                   color='blue.500'
                   size='xl'
                 />}
-              </span> :
-                explorePost.map((data) => <ExploreCard data={data} />)
+              </span> :<ExploreCard explorePost={explorePost} />
             }
           </div>
         </div>

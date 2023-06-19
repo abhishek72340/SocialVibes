@@ -15,8 +15,6 @@
     justify-content: center;
     width: 40vw;
     height: 100vh;
-
-
 }
 
 #add-post-block {
@@ -76,4 +74,67 @@
     height: 1.4rem;
     background-color: blueviolet;
     color: white;
+}
+
+/* design for mobile */
+@media (max-width:480px) {
+    #add-post-block {
+        margin-top: 4rem;
+    }
+
+    #post-theme-post-button {
+        margin-left: -10rem;
+        margin-top: 7rem;
+    }
+
+    #post-icon {
+        display: flex;
+        gap: 1rem;
+        margin-top: 7rem;
+    }
+
+    ::placeholder {
+        font-size: 10px;
+    }
+}
+
+/* design for small tablet */
+@media (max-width:769px) {
+
+    #add-post-block {
+        margin-top: 4rem;
+    }
+
+    #post-theme-post-button {
+        margin-left: -10rem;
+        margin-top: 7rem;
+    }
+
+    #post-icon {
+        display: flex;
+        gap: 1rem;
+        margin-top: 7rem;
+    }
+
+    ::placeholder {
+        font-size: 10px;
+    }
+}
+
+@media (max-width:1024px) {
+
+    #add-post-block {
+
+        margin-left: -3em;
+    }
+
+    #post-theme-post-button {
+        margin-left: -12rem;
+        margin-top: 4rem;
+    }
+
+    #post-icon {
+        margin-top: 4rem;
+    }
+
 }
