@@ -10,10 +10,10 @@ const BookmarkProvider = ({ children }) => {
     const addBookmarkPost = async (postId) => {
         const token = localStorage.getItem('token')
         try {
-            const { data } = await axios.post(`/api/users/bookmark/${postId}`, {}, {
+            const {data} = await axios.post(`/api/users/bookmark/${postId}`, {}, {
                 headers: { authorization: token },
             });
-            console.log(data)
+            // console.log(res)
             setBookmarkPost(data.bookmarks)
             notifySuccess('added successfully')
          
@@ -30,7 +30,8 @@ try{
 const {data}=await axios.post(`/api/users/remove-bookmark/${postId}`,{},{
     headers:{authorization:token}
 });
-console.log(data)
+// console.log(data)
+
 setBookmarkPost(data.bookmarks);
 notifyError('delete successfully')
 }

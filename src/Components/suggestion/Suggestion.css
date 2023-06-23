@@ -8,6 +8,7 @@
     display: flex;
     justify-content: space-evenly;
     margin-top: 2rem;
+    cursor: pointer;
 }
 #suggestion-profile-picture{
     width: 2rem;

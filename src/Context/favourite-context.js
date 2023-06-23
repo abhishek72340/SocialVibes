@@ -11,10 +11,10 @@ const FavouriteProvider = ({ children }) => {
     const addFavouritePost = async (postId) => {
         const token = localStorage.getItem('token')
         try {
-            const { data } = await axios.post(`/api/posts/like/${postId}`, {}, {
+            const {data} = await axios.post(`/api/posts/like/${postId}`, {}, {
                 headers: { authorization: token },
             });
-            console.log(data);
+            // console.log(data.posts.likes.likeCount);
             setFavouritePost(data.posts)
         }
         catch (error) {

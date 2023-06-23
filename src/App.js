@@ -11,6 +11,8 @@ import Error from "./Pages/error/Error";
 import PrivatePage from './Pages/privatePage/PrivatePage';
 import { ToastContainer } from 'react-toastify';
 import Welcome from './Pages/welcome/Welcome';
+import SinglePost from "./Pages/singlePost/SinglePost";
+import SingleUser from "./Pages/singleUser/SingleUser";
 
 function App() {
   return (
@@ -29,6 +31,8 @@ function App() {
         <Route path='/explore' element={<Explore />} />
         <Route path='/login' element={<Login />} />
         <Route path='/signup' element={<Signup />} />
+        <Route path='/singlepost/:id' element={<SinglePost />} />
+        <Route path='/singleuser/:userId' element={<SingleUser />} />
         <Route path='*' element={<Error />} />
 
       </Routes>

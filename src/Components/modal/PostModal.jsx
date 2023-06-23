@@ -1,4 +1,5 @@
 import './PostModal.css';
+import { useState } from 'react';
 import me from '../../images/me.jpg'
 import { MdPhotoSizeSelectActual } from 'react-icons/md';
 import { BsEmojiSmileFill } from 'react-icons/bs';
@@ -11,13 +12,20 @@ import {
   ModalHeader,
   ModalCloseButton,
   ModalBody,
-  // Lorem,
   ModalFooter
 }
   from '@chakra-ui/react'
+import { useExplore } from '../../Context/explore-context';
+import { useAuth } from '../../Context/auth-context';
 export function PostModal() {
   const { isOpen, onOpen, onClose } = useDisclosure()
+  const [textInput, setTextInput] = useState('')
+  const { NewPost } = useExplore();
+  const { detail } = useAuth();
 
+  const textareaChangeHandler = (e) => {
+    setTextInput(e.target.value)
+  }
   return (
     <>
       <Button onClick={onOpen} id='post-modal'>Post</Button>
@@ -35,11 +43,11 @@ export function PostModal() {
             </div>
 
             <span><img src={me} alt="img" id='modal-profile' /></span>
-            <textarea name="" id="modal-post-input-text" cols="30" rows="10" placeholder='whats happening'></textarea>
+            <textarea name="" id="modal-post-input-text" cols="30" rows="10" placeholder='whats happening' onChange={textareaChangeHandler}></textarea>
           </ModalBody>
 
           <ModalFooter>
-            <Button id='modal-post-button' mr={3}>
+            <Button id='modal-post-button' mr={3} onClick={() => NewPost({ username: detail.username, content: textInput })}>
               Post
             </Button>
 

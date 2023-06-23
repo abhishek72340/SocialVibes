@@ -11,6 +11,8 @@ import { BookmarkProvider } from "./Context/bookmark-context";
 import { AuthProvider } from './Context/auth-context';
 import { ToastProvider } from "./Context/toastify-context";
 import { FavouriteProvider } from "./Context/favourite-context";
+import { UserProvider } from './Context/user-context'
+
 // Call make Server
 makeServer();
 
@@ -19,17 +21,19 @@ ReactDOM.render(
     <BrowserRouter>
       <ToastProvider>
         <ChakraProvider>
-          <FavouriteProvider>
-            <ExploreProvider>
-              <BookmarkProvider>
-                <SuggestionProvider>
-                  <AuthProvider>
-                    <App />
-                  </AuthProvider>
-                </SuggestionProvider>
-              </BookmarkProvider>
-            </ExploreProvider>
-          </FavouriteProvider>
+          <UserProvider>
+            <FavouriteProvider>
+              <ExploreProvider>
+                <BookmarkProvider>
+                  <SuggestionProvider>
+                    <AuthProvider>
+                      <App />
+                    </AuthProvider>
+                  </SuggestionProvider>
+                </BookmarkProvider>
+              </ExploreProvider>
+            </FavouriteProvider>
+          </UserProvider>
         </ChakraProvider>
       </ToastProvider>
     </BrowserRouter>

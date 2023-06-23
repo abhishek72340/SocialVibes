@@ -5,7 +5,7 @@ import Navbar from '../../Components/navbar/Navbar'
 import LeftSideBar from "../../Components/leftSideBar/LeftSideBar";
 import RightSideBar from "../../Components/rightSideBar/RightSideBar";
 import { useExplore } from '../../Context/explore-context'
-import { Spinner } from '@chakra-ui/react'
+import { Spinner } from '@chakra-ui/react';
 
 export default function Explore() {
   const { explorePost, isLoading } = useExplore();

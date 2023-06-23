@@ -4,10 +4,9 @@ import { NavLink } from 'react-router-dom';
 import BottomNavbar from '../bottomNavbar/BottomNavbar'
 import { PostModal } from '../modal/PostModal';
 import { useAuth } from '../../Context/auth-context';
-import { AiOutlineHome } from 'react-icons/ai';
 import { MdExplore } from 'react-icons/md';
 import { BsBookmarks } from 'react-icons/bs';
-import { AiOutlineHeart } from 'react-icons/ai';
+import { MdOutlineFeedback } from 'react-icons/md';
 import { FiLogOut } from 'react-icons/fi';
 import { AiFillPlusCircle } from 'react-icons/ai';
 import me from '../../images/me.jpg'
@@ -17,6 +16,7 @@ const {userLogout}=useAuth();
 
   const getActiveStyle = ({ isActive }) => ({
     color: isActive ? 'blueviolet' : '',
+ 
 
   });
   return (
@@ -24,10 +24,9 @@ const {userLogout}=useAuth();
       <div id='left-sidebar-block'>
         <div id='left-sidebar-theme'>
           <div id='left-sidebar-data'>
-            <NavLink to='/' style={getActiveStyle}><div className='left-sidebar-data-icon'><span className='left-sidebar-icon' ><AiOutlineHome /></span><span className='left-sidebar-link'>Home</span></div></NavLink>
+            <NavLink to='/' style={getActiveStyle}><div className='left-sidebar-data-icon'><span className='left-sidebar-icon' ><MdOutlineFeedback/></span><span className='left-sidebar-link'>Feed</span></div></NavLink>
             <NavLink to='/explore' style={getActiveStyle}><div className='left-sidebar-data-icon'><span className='left-sidebar-icon'><MdExplore /></span><span className='left-sidebar-link'>Explore</span></div></NavLink>
             <NavLink to='/bookmark' style={getActiveStyle}><div className='left-sidebar-data-icon'><span className='left-sidebar-icon'><BsBookmarks /></span><span className='left-sidebar-link'>Bookmarks</span></div></NavLink>
-            <NavLink to='/favourite' style={getActiveStyle}><div className='left-sidebar-data-icon'><span className='left-sidebar-icon'><AiOutlineHeart /></span><span className='left-sidebar-link'>Favourites</span></div></NavLink>
             <NavLink to='/login' style={getActiveStyle}><div className='left-sidebar-data-icon' onClick={userLogout}><span className='left-sidebar-icon'><FiLogOut /></span><span className='left-sidebar-link'>Logout</span></div></NavLink>
             <span id='left-sidebar-post'><PostModal /></span>
             <div id='add-post-button'><AiFillPlusCircle /></div>
