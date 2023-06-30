@@ -1,12 +1,12 @@
 import './Navbar.css';
 import { useUser } from '../../Context/user-context'
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useState } from 'react';
 // import logo from '../../images/logo.png'
 import {
   Box,
   Flex,
-   Button,
+  Button,
   useColorModeValue,
   Stack,
   useColorMode,
@@ -21,7 +21,7 @@ export default function Navbar() {
   const { user } = useUser();
 
 
-    const searchUsername = (e) => {
+  const searchUsername = (e) => {
     setInput(e.target.value);
   };
   let filteredUsername = user.filter(data => data.username.toLowerCase().includes(input.toLocaleLowerCase()))
@@ -53,7 +53,7 @@ export default function Navbar() {
                 return (
                   // <div id='user-search-container'>
                   <div key={item._id} >
-                   <Link to={`/singleuser/${item._id}`}> <span>{item.username}</span></Link>
+                    <Link to={`/singleuser/${item._id}`} > <span>{item.username}</span></Link>
                   </div>
                   // </div>
                 )

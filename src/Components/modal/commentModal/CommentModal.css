@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#comment-modal-container{
+    position: fixed;
+    top: 30%;
+    left: 30%;
+    width: 40vw;
+    height: 40vh;
+    background-color: blueviolet;
+}

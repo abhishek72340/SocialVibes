@@ -38,7 +38,7 @@ export function PostModal() {
           <ModalBody pb={6} id='modal-profile-input-field'>
 
             <div id='modal-post-icon'>
-              <span><MdPhotoSizeSelectActual /></span>
+              <span><MdPhotoSizeSelectActual /> </span>
               <span><BsEmojiSmileFill /></span>
             </div>
 

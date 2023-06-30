@@ -6,7 +6,6 @@ const exploreContext = createContext();
 const ExploreProvider = ({ children }) => {
     const [explorePost, setExplorePost] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
-
     const { notifySuccess, notifyError } = useToast();
 
 
@@ -18,7 +17,7 @@ const ExploreProvider = ({ children }) => {
             setIsLoading(false)
         }
         catch (error) {
-            alert(error)
+            notifyError(error)
         }
     }
     useEffect(() => {
@@ -40,7 +39,8 @@ const ExploreProvider = ({ children }) => {
         } catch (error) {
             notifyError(error)
         }
-setExplorePost([post,...explorePost])
+        setExplorePost([post, ...explorePost]);
+
     };
     return (
         <exploreContext.Provider value={{ NewPost, explorePost, isLoading }}>

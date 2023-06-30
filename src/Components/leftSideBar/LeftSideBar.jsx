@@ -32,6 +32,7 @@ const {userLogout}=useAuth();
             <div id='add-post-button'><AiFillPlusCircle /></div>
           </div>
         </div>
+        
         <div id='profile-highlight'>
           <span ><img src={me} alt="img" id='profile-picture' /></span>
           <span id='profile-name'>Abhishek</span>

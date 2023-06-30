@@ -6,20 +6,18 @@ box-sizing: border-box;
 
 #welcome{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+       justify-content: center;
     align-items: center;
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: bold;
     height: 100vh;
-    font-family: 'Hammersmith One', sans-serif;
-
-}
+   }
 #social{
 color:blueviolet;
 
 }
+#social-vibes{
+    font-size: 7rem;
+    font-family: 'Hammersmith One', sans-serif;
+}
 
-/* #vibes{
-
-} */
