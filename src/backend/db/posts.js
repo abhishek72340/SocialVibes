@@ -70,124 +70,124 @@ export const posts = [
     createdAt: "2023-06-10T10:55:06+05:30",
     updatedAt: formatDate(),
   },
-  {
-    _id: "MTYtVhecCj",
-    content:
-      "Every sunset brings the promise of a new dawn.",
-    mediaURL: "https://t3.ftcdn.net/jpg/04/36/67/54/360_F_436675446_jGWzkVDah3b6ONZxhhN13s6I4iFnjLGJ.jpg",
-    likes: {
-      likeCount: 5,
-      likedBy: [],
-      dislikedBy: [],
-    },
-    comments: [],
-    username: "adarshbalika",
-    createdAt: "2023-06-06T10:55:06+05:30",
-    updatedAt: formatDate(),
-  },
-  {
-    _id: "3XHvLP9kC",
-    content: "Amidst the darkness, let the light of unity and harmony illuminate Ayodhya!",
-    mediaURL:
-      "https://c4.wallpaperflare.com/wallpaper/61/50/360/night-lights-india-river-barn-ayodhya-hd-wallpaper-preview.jpg",
-    likes: {
-      likeCount: 2,
-      likedBy: [],
-      dislikedBy: [],
-    },
-    comments: [
-      {
-        _id: "EO7iOPN9n8",
-        username: "carlsmith",
-        text: "Happy Birthday! Enjoy your Day!!",
-        votes: {
-          upvotedBy: [],
-          downvotedBy: [],
-        },
-      },
-      {
-        _id: "QK52wf6HI1",
-        username: "janedoe",
-        text: "Wow! Looks Amazzing! Happy Birthday!",
-        votes: {
-          upvotedBy: [],
-          downvotedBy: [],
-        },
-      },
-    ],
-    username: "adarshbalika",
-    createdAt: "2023-06-15T10:55:06+05:30",
-    updatedAt: formatDate(),
-  },
-  {
-    _id: "tHaThLyFQh",
-    content:
-      "Your education is a dress rehearsal for a life that is yours to lead.",
-    mediaURL: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8rpohBoKbOEaXarE_0xDIWdVAni8DxR4onw&usqp=CAU",
-    likes: {
-      likeCount: 2,
-      likedBy: [],
-      dislikedBy: [],
-    },
-    comments: [],
-    username: "adarshbalika",
-    createdAt: "2023-06-06T10:55:06+05:30",
-    updatedAt: formatDate(),
-  },
-  {
-    _id: "G-Gi3lSZP9",
-    content: "A true friend is someone who is there for you when they would rather be anywhere else.",
-    mediaURL: "https://e1.pxfuel.com/desktop-wallpaper/835/168/desktop-wallpaper-4-friendship-funny-quotes-on-college-life-college-friends.jpg",
-    likes: {
-      likeCount: 2,
-      likedBy: [],
-      dislikedBy: [],
-    },
-    comments: [],
-    username: "adarshbalika",
-    createdAt: "2023-06-06T10:55:06+05:30",
-    updatedAt: formatDate(),
-  },
-  {
-    _id: "GeMUAdi9mh",
-    content:
-      "Embrace the challenges of today and let your relentless effort pave the way for a brighter tomorrow",
-    mediaURL: "https://images7.alphacoders.com/418/418327.jpg",
-    likes: {
-      likeCount: 2,
-      likedBy: [],
-      dislikedBy: [],
-    },
-    comments: [],
-    username: "adarshbalika",
-    createdAt: "2023-06-06T12:55:06+05:30",
-    updatedAt: formatDate(),
-  },
-  {
-    _id: "IyUlYXTrzZ",
-    content: "Who's up for Pineapple Pastry?",
-    mediaURL:
-      "https://res.cloudinary.com/dtrjdcrme/image/upload/v1647014828/ecommerce/pineapplemuffin1.webp",
-    likes: {
-      likeCount: 10,
-      likedBy: [],
-      dislikedBy: [],
-    },
-    comments: [
-      {
-        _id: "6nIffvImxo",
-        username: "sophiajones",
-        text: "Oh! That looks Delicious!",
-        votes: {
-          upvotedBy: [],
-          downvotedBy: [],
-        },
-      },
-    ],
-    username: "abhisheksingh",
-    createdAt: "2023-06-10T10:55:06+05:30",
-    updatedAt: formatDate(),
-  },
+  // {
+  //   _id: "MTYtVhecCj",
+  //   content:
+  //     "Every sunset brings the promise of a new dawn.",
+  //   mediaURL: "https://t3.ftcdn.net/jpg/04/36/67/54/360_F_436675446_jGWzkVDah3b6ONZxhhN13s6I4iFnjLGJ.jpg",
+  //   likes: {
+  //     likeCount: 5,
+  //     likedBy: [],
+  //     dislikedBy: [],
+  //   },
+  //   comments: [],
+  //   username: "adarshbalika",
+  //   createdAt: "2023-06-06T10:55:06+05:30",
+  //   updatedAt: formatDate(),
+  // },
+  // {
+  //   _id: "3XHvLP9kC",
+  //   content: "Amidst the darkness, let the light of unity and harmony illuminate Ayodhya!",
+  //   mediaURL:
+  //     "https://c4.wallpaperflare.com/wallpaper/61/50/360/night-lights-india-river-barn-ayodhya-hd-wallpaper-preview.jpg",
+  //   likes: {
+  //     likeCount: 2,
+  //     likedBy: [],
+  //     dislikedBy: [],
+  //   },
+  //   comments: [
+  //     {
+  //       _id: "EO7iOPN9n8",
+  //       username: "carlsmith",
+  //       text: "Happy Birthday! Enjoy your Day!!",
+  //       votes: {
+  //         upvotedBy: [],
+  //         downvotedBy: [],
+  //       },
+  //     },
+  //     {
+  //       _id: "QK52wf6HI1",
+  //       username: "janedoe",
+  //       text: "Wow! Looks Amazzing! Happy Birthday!",
+  //       votes: {
+  //         upvotedBy: [],
+  //         downvotedBy: [],
+  //       },
+  //     },
+  //   ],
+  //   username: "adarshbalika",
+  //   createdAt: "2023-06-15T10:55:06+05:30",
+  //   updatedAt: formatDate(),
+  // },
+  // {
+  //   _id: "tHaThLyFQh",
+  //   content:
+  //     "Your education is a dress rehearsal for a life that is yours to lead.",
+  //   mediaURL: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8rpohBoKbOEaXarE_0xDIWdVAni8DxR4onw&usqp=CAU",
+  //   likes: {
+  //     likeCount: 2,
+  //     likedBy: [],
+  //     dislikedBy: [],
+  //   },
+  //   comments: [],
+  //   username: "adarshbalika",
+  //   createdAt: "2023-06-06T10:55:06+05:30",
+  //   updatedAt: formatDate(),
+  // },
+  // {
+  //   _id: "G-Gi3lSZP9",
+  //   content: "A true friend is someone who is there for you when they would rather be anywhere else.",
+  //   mediaURL: "https://e1.pxfuel.com/desktop-wallpaper/835/168/desktop-wallpaper-4-friendship-funny-quotes-on-college-life-college-friends.jpg",
+  //   likes: {
+  //     likeCount: 2,
+  //     likedBy: [],
+  //     dislikedBy: [],
+  //   },
+  //   comments: [],
+  //   username: "adarshbalika",
+  //   createdAt: "2023-06-06T10:55:06+05:30",
+  //   updatedAt: formatDate(),
+  // },
+  // {
+  //   _id: "GeMUAdi9mh",
+  //   content:
+  //     "Embrace the challenges of today and let your relentless effort pave the way for a brighter tomorrow",
+  //   mediaURL: "https://images7.alphacoders.com/418/418327.jpg",
+  //   likes: {
+  //     likeCount: 2,
+  //     likedBy: [],
+  //     dislikedBy: [],
+  //   },
+  //   comments: [],
+  //   username: "adarshbalika",
+  //   createdAt: "2023-06-06T12:55:06+05:30",
+  //   updatedAt: formatDate(),
+  // },
+  // {
+  //   _id: "IyUlYXTrzZ",
+  //   content: "Who's up for Pineapple Pastry?",
+  //   mediaURL:
+  //     "https://res.cloudinary.com/dtrjdcrme/image/upload/v1647014828/ecommerce/pineapplemuffin1.webp",
+  //   likes: {
+  //     likeCount: 10,
+  //     likedBy: [],
+  //     dislikedBy: [],
+  //   },
+  //   comments: [
+  //     {
+  //       _id: "6nIffvImxo",
+  //       username: "sophiajones",
+  //       text: "Oh! That looks Delicious!",
+  //       votes: {
+  //         upvotedBy: [],
+  //         downvotedBy: [],
+  //       },
+  //     },
+  //   ],
+  //   username: "abhisheksingh",
+  //   createdAt: "2023-06-10T10:55:06+05:30",
+  //   updatedAt: formatDate(),
+  // },
   {
     _id: "Ie92xOSVeU",
     content:

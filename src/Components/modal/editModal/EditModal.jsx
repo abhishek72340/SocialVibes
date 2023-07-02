@@ -20,7 +20,6 @@ import {
   import { useExplore } from '../../../Context/explore-context';
 export default function EditModal({data}) {
     const { isOpen, onOpen, onClose } = useDisclosure();
-        // const [textInput, setTextInput] = useState('')
     const [content, setContent] = useState(data.content)
 
     const initialRef = React.useRef(null)
@@ -32,7 +31,7 @@ export default function EditModal({data}) {
       }
     return (
       <>
-        <Button onClick={onOpen}><AiOutlineEdit/></Button>
+        <Button onClick={onOpen} style={{backgroundColor:'blueviolet', color:'white'}}><AiOutlineEdit/></Button>
         
         <Modal
           initialFocusRef={initialRef}

@@ -47,15 +47,15 @@ export default function Navbar() {
         </Flex>
 
         <div id='user-search'>
-          <div >
+          <div id='search-by-username'>
             {
               input && filteredUsername.length > 0 ? filteredUsername.map((item) => {
                 return (
-                  // <div id='user-search-container'>
-                  <div key={item._id} >
-                    <Link to={`/singleuser/${item._id}`} > <span>{item.username}</span></Link>
+                  <div id='blur-search-field'>
+                    <div key={item._id}  >
+                      <Link to={`/singleuser/${item._id}`} > <span>{item.username}</span></Link>
+                    </div>
                   </div>
-                  // </div>
                 )
               }) : null
             }
