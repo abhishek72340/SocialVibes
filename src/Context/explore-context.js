@@ -42,8 +42,41 @@ const ExploreProvider = ({ children }) => {
         setExplorePost([post, ...explorePost]);
 
     };
+
+    // Edit post
+    const EditPost = async (post, postId) => {
+        const token = localStorage.getItem("token");
+        try {
+            const { data } = await axios.post(
+                `/api/posts/edit/${postId}`,
+                { postData: post },
+                {
+                    headers: { authorization: token },
+                }
+            );
+            setExplorePost(data.posts);
+        } catch (err) {
+            console.log(err);
+        }
+    };
+
+    //Delee Post
+    const DeletePost = async (postId) => {
+        const token = localStorage.getItem("token");
+        try {
+            const { data } = await axios.delete(`/api/posts/${postId}`, {
+                headers: { authorization: token },
+            });
+
+            setExplorePost(data.posts);
+
+        } catch (err) {
+            console.log(err);
+            
+        }
+    };
     return (
-        <exploreContext.Provider value={{ NewPost, explorePost, isLoading }}>
+        <exploreContext.Provider value={{DeletePost, EditPost, NewPost, explorePost, isLoading, getExplorePost }}>
             {children}
         </exploreContext.Provider>
     )

@@ -1,4 +1,4 @@
-import { createContext, useContext, useState,useEffect } from 'react';
+import { createContext, useContext, useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { useToast } from '../Context/toastify-context';
@@ -7,7 +7,7 @@ const authContext = createContext();
 const AuthProvider = ({ children }) => {
     const [userToken, setUserToken] = useState('');
     const [detail, setDetail] = useState();
-   
+
     const [userDetails, setUserDetails] = useState({
         username: '',
         password: ''
@@ -28,7 +28,7 @@ const AuthProvider = ({ children }) => {
 
     //Login Function//
     const dummyUser = {
-        username: "@abhishek",
+        username: "abhishek",
         password: "abhishek123",
     };
 
@@ -61,12 +61,12 @@ const AuthProvider = ({ children }) => {
                 localStorage.setItem("foundUser", JSON.stringify(data.foundUser));
                 setUserToken(data.encodedToken);
                 setDetail(data.foundUser);
-              
-                
+
+
             }
             if (data) {
                 navigate('welcome')
-               
+
             }
         }
         catch (err) {
@@ -109,7 +109,7 @@ const AuthProvider = ({ children }) => {
 
                 if (data) {
                     navigate('/welcome')
-                   
+
                 }
             }
             catch (error) {
@@ -135,7 +135,17 @@ const AuthProvider = ({ children }) => {
             setDetail(JSON.parse(localStorage.getItem("foundUser")));
 
         }
-    }, [userToken]);
+    }, [userToken]);
+
+
+    useEffect(() => {
+        const token = localStorage.getItem('token')
+        if (token) {
+            const foundUser = JSON.parse(localStorage.getItem('foundUser'))
+            setUserDetails(foundUser);
+        }
+    }, []);
+
     return (
         <authContext.Provider value={{ userData, signupInputChange, signupHandler, userLogout, userToken, detail, loginHandler, LoginDataHandler, userDetails, applyDummyData }}>
             {children}

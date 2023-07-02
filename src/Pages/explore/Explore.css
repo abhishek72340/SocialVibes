@@ -47,6 +47,46 @@
 
 }
 
+#edit-icon {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1.1rem;
+    gap: 1rem;
+    cursor: pointer;
+
+}
+
+#edit-modal {
+    width: 5rem;
+    height: 4rem;
+    background-color: rgb(229, 238, 241);
+    position: absolute;
+    margin-top: 1rem;
+    margin-left: -4rem;
+    border-radius: 5px;
+}
+
+#dlt-icon {
+    margin-left: 1rem;
+}
+
+#full-like-icon {
+    color: blueviolet
+}
+
+.like {
+    position: absolute;
+    font-size: 1rem;
+    margin-top: -1.2rem;
+    margin-left: 1.5rem;
+}
+
+.like-full {
+    position: absolute;
+    font-size: 1rem;
+    margin-left: 1.5rem;
+}
+
 /* design for mobile */
 @media(max-width:480px) {
     #explore-card {

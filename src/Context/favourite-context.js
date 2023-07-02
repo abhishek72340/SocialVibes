@@ -1,24 +1,26 @@
 import { createContext, useContext, useState } from 'react';
 import axios from 'axios';
 import { useToast } from '../Context/toastify-context';
+import { useExplore } from './explore-context';
 const favouriteContext = createContext();
-
 const FavouriteProvider = ({ children }) => {
     const [favouritePost, setFavouritePost] = useState([]);
     const { notifyError, notifySuccess } = useToast()
+    const { getExplorePost } = useExplore();
 
     // add favourite post
     const addFavouritePost = async (postId) => {
         const token = localStorage.getItem('token')
         try {
-            const {data} = await axios.post(`/api/posts/like/${postId}`, {}, {
+            const { data } = await axios.post(`/api/posts/like/${postId}`, {}, {
                 headers: { authorization: token },
+
             });
-            // console.log(data.posts.likes.likeCount);
+            getExplorePost()
             setFavouritePost(data.posts)
         }
         catch (error) {
-
+            console.log(error);
         }
     };
 
@@ -26,11 +28,12 @@ const FavouriteProvider = ({ children }) => {
     const deleteFavouritePost = async (postId) => {
         const token = localStorage.getItem('token')
         try {
-            const { data } = await axios.post(` /api/posts/dislike/${postId}`, {}, {
-                headers: { authorization: token }
-            })
+            const { data } = await axios.delete(` /api/posts/dislike/${postId}`,{}, {
+                headers: { authorization: token },
+            });
+            getExplorePost()
+            // console.log(data.posts)
             setFavouritePost(data.posts)
-            notifySuccess('delete successfull')
         }
         catch (error) {
             notifyError(error)

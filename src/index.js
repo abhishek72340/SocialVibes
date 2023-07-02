@@ -22,8 +22,8 @@ ReactDOM.render(
       <ToastProvider>
         <ChakraProvider>
           <UserProvider>
-            <FavouriteProvider>
               <ExploreProvider>
+            <FavouriteProvider>
                 <BookmarkProvider>
                   <SuggestionProvider>
                     <AuthProvider>
@@ -31,8 +31,8 @@ ReactDOM.render(
                     </AuthProvider>
                   </SuggestionProvider>
                 </BookmarkProvider>
-              </ExploreProvider>
             </FavouriteProvider>
+              </ExploreProvider>
           </UserProvider>
         </ChakraProvider>
       </ToastProvider>
