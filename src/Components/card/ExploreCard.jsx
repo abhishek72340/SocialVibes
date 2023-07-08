@@ -14,30 +14,27 @@ import { useAuth } from '../../Context/auth-context';
 import { useFavourite } from '../../Context/favourite-context';
 import { useUser } from '../../Context/user-context';
 
-export default function ExploreCard({ explorePost }) {
+export default function ExploreCard({ post }) {
     const [commentModal, setCommentModal] = useState(false)
+    const [edit, setEdit] = useState(false);
     const { addBookmarkPost, bookmarkPost, deleteBookmarkPost } = useBookmark();
     const { addFavouritePost, dislikePost } = useFavourite();
-    const [edit, setEdit] = useState(false);
 
     const { DeletePost } = useExplore();
     const { userDetails } = useAuth();
     const { findUser } = useUser();
 
     const navigate = useNavigate();
-
-
     const comentModalHandler = () => {
         setCommentModal(!commentModal)
     };
     const editHandler = () => {
         setEdit(!edit)
-    }
-
+    };
     return (
-        <div  >
+        <div>
             {
-                explorePost.map((data) => {
+                post.map((data) => {
                     return (
                         <div key={data._id} id='explore-card'>
                             <div id='explore-data'>
@@ -46,14 +43,14 @@ export default function ExploreCard({ explorePost }) {
 
                                     {data.username === userDetails?.username ?
                                         <div> {edit && <div id='edit-modal'>
-                                            {data.username === userDetails?.username ? <span ><EditModal data={data}  /></span> : null}
-                                            {data.username === userDetails?.username ? <span onClick={() => DeletePost(data._id)}><MdDeleteOutline id='dlt-icon' onClick={editHandler}/></span> : null}
+                                            {data.username === userDetails?.username ? <span ><EditModal data={data} /></span> : null}
+                                            {data.username === userDetails?.username ? <span onClick={() => DeletePost(data._id)}><MdDeleteOutline id='dlt-icon' onClick={editHandler} /></span> : null}
                                         </div>}
                                         </div> : null}
                                 </div>
 
                                 <div id='post-user-info'>
-                                    <img src={findUser(data?.username)?.avatarUrl} alt="profile" id='profile-avatar' />
+                                    <img src={findUser(data?.username)?.avatarUrl} alt="profile" id='profile-avatar' onClick={() => navigate(`/userprofile/${data?.username}`)} />
                                     <div id='user-name'>
                                         <span>{findUser(data?.username)?.firstName}</span>
                                         <span>{findUser(data?.username)?.lastName}</span>

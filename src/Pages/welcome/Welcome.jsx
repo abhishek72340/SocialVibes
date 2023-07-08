@@ -6,7 +6,7 @@ export default function Welcome() {
   useEffect(() => {
     const timeOut = setTimeout(() => {
       navigate('/')
-    }, 2000)
+    }, 3000)
     return () => clearTimeout(timeOut)
   }, [navigate]);
   return (

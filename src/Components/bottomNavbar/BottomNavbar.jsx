@@ -17,7 +17,7 @@ export default function BottomNavbar() {
           <NavLink><MdExplore /></NavLink>
           <NavLink><BsBookmarks /></NavLink>
           <span id='bottom-nav-post-button'><AiFillPlusCircle /></span>
-          <NavLink><AiOutlineHeart /></NavLink>
+          {/* <NavLink><AiOutlineHeart /></NavLink> */}
           <NavLink><FiLogOut /></NavLink>
           
           <span ><img src={me} alt="profile" id='bottom-profile-picture' /></span>

@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#profile-modal {
+    border-radius: 0;
+    border: 1px solid blueviolet;
+    background-color: #fff;
+    height: 1.8rem;
+}
+
+#profile-form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    margin-left: 4rem;
+}
+
+#profile-form input {
+    width: 20vw;
+    height: 1.8rem;
+    border: 1px solid black;
+    outline: none;
+}
+#profile-modal-picture{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+}
+#profile-modal-picture-container{
+    display: flex;
+    justify-content: center;
+}

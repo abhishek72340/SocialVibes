@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#profile-information-container {
+    display: flex;
+    justify-content: center;
+    
+
+}
+
+#profile-information {
+    height: 40vh;
+    margin-top: 5rem;
+    width: 42vw;
+    border: 1px solid lightgray;
+
+}
+
+#user-profile-picture {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+}
+
+#profile-edit {
+    display: flex;
+    font-size: 1.2rem;
+    font-weight: 500;
+    justify-content: space-between;
+    margin: 0.6rem;
+}
+
+#profile-name {
+    display: flex;
+}
+
+#user-name-highlight {
+    margin: 0.8rem;
+}
+
+#edit-button-icon {
+    display: flex;
+    gap: 10px;
+    margin: 1rem;
+
+}
+
+#icon {
+    font-size: 1.4rem;
+    margin-top: 0.4rem;
+}
+
+#user-bio {
+    display: flex;
+    flex-direction: column;
+    margin-left: 7rem;
+    margin-top: -3rem;
+    gap: 1rem;
+}
+
+#bio-link {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+#bio-link a{
+    color: green;
+}
+#following {
+    display: flex;
+    gap: 4rem;
+    margin-top: 1rem;
+    font-family: 'Hammersmith One', sans-serif;
+    cursor: pointer;
+
+}
+
+#edit-modal {
+    width: 30vw;
+    height: 30vh;
+    background-color: gray;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+}
+#user-profile-post{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 3rem;
+}

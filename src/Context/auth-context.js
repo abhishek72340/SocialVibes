@@ -145,7 +145,7 @@ const AuthProvider = ({ children }) => {
 //     }
 // },[])
     return (
-        <authContext.Provider value={{ userData, signupInputChange, signupHandler, userLogout, userToken, detail, loginHandler, LoginDataHandler, userDetails, applyDummyData }}>
+        <authContext.Provider value={{setUserDetails, userData, signupInputChange, signupHandler, userLogout, userToken, detail, loginHandler, LoginDataHandler, userDetails, applyDummyData }}>
             {children}
         </authContext.Provider>
     )

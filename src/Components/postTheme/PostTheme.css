@@ -15,15 +15,15 @@
 #post-theme-data {
     display: flex;
     justify-content: center;
-       width: 40vw;
+    width: 40vw;
     height: 100vh;
 }
 
 #add-post-block {
-    width: 40vw;
+    width: 42vw;
     height: 30vh;
-    box-shadow: 1px 1px 6px lightgray;
-position: absolute;
+    border: 1px solid lightgray;
+    position: absolute;
 }
 
 #profile-add {
@@ -76,13 +76,20 @@ position: absolute;
     background-color: blueviolet;
     color: white;
 }
-#upload-post-theme{
-  margin-top: 8rem;
+
+#upload-post-theme {
+    margin-top: 10rem;
 }
 
 
 /* design for mobile */
 @media (max-width:480px) {
+
+
+    #add-post-block {
+        display: none;
+    }
+
     #add-post-block {
         margin-top: 4rem;
     }
@@ -105,13 +112,21 @@ position: absolute;
 
 /* design for small tablet */
 @media (max-width:769px) {
+    #upload-post-theme {
+        margin-left: 10rem;
+        margin-top: 0rem;
+    }
+
+    #add-post-block {
+        display: none;
+    }
 
     #add-post-block {
         margin-top: 4rem;
     }
 
     #post-theme-post-button {
-        margin-left: -10rem;
+        margin-left: -8rem;
         margin-top: 7rem;
     }
 
@@ -129,17 +144,31 @@ position: absolute;
 @media (max-width:1024px) {
 
     #add-post-block {
-
-        margin-left: -3em;
+        margin-left: -3rem;
+        width: 40vw;
+        height: 40vh;
     }
 
     #post-theme-post-button {
-        margin-left: -12rem;
-        margin-top: 4rem;
+        margin-left: -10rem;
+        margin-top: -1.5rem;
     }
 
     #post-icon {
-        margin-top: 4rem;
+        margin-top: -1.2rem;
+    }
+}
+
+@media (max-width:1240px) {
+    #post-theme-post-button {
+        margin-left: -2rem;
+        margin-top: -0.5rem;
+    }
+
+    #add-post-block {
+        margin-left: -3rem;
+        width: 42vw;
+        height: 40vh;
     }
 
 }

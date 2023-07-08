@@ -1,6 +1,6 @@
 import './Navbar.css';
 import { useUser } from '../../Context/user-context'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 // import logo from '../../images/logo.png'
 import {
@@ -17,7 +17,7 @@ import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 export default function Navbar() {
   const { colorMode, toggleColorMode } = useColorMode();
   const [input, setInput] = useState('');
-
+  const navigate = useNavigate();
   const { user } = useUser();
 
 
@@ -52,8 +52,10 @@ export default function Navbar() {
               input && filteredUsername.length > 0 ? filteredUsername.map((item) => {
                 return (
                   <div id='blur-search-field'>
-                    <div key={item._id}  >
-                      <Link to={`/singleuser/${item._id}`} > <span>{item.username}</span></Link>
+                    <div key={item._id} onClick={() => navigate(`/userprofile/${item?.username}`)}  >
+                      <span ><img src={item.avatarUrl} alt="profile" className='h-[40px] w-[40px] rounded-full' />
+                        {item.username}
+                        </span>
                     </div>
                   </div>
                 )

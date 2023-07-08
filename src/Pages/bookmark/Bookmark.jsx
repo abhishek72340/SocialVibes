@@ -17,7 +17,7 @@ export default function Bookmark() {
         <div>
           {
             bookmarkPost.length ?
-              bookmarkPost.map((post) => <BookmarkCard post={post} />) :
+              bookmarkPost.map((data) => <BookmarkCard data={data} />) :
               <span id='no-bookmark'>No Bokmark </span>
           }
         </div>

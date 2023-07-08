@@ -14,14 +14,13 @@
     display: flex;
     width: 35vw;
     height: 100vh;
-
 }
 
 #explore-card {
     margin-top: 5rem;
     width: 42vw;
-    box-shadow: 1px 1px 5px lightgray;
-    margin-left: -2.5rem;
+    border: 1px solid lightgray;
+    margin-left: -2.8rem;
 }
 
 #post-media {
@@ -54,15 +53,15 @@
     font-size: 1.1rem;
     gap: 1rem;
     cursor: pointer;
-   
+
 }
 
 
 #edit-modal {
     width: 5rem;
     height: 4rem;
-    background-color:blueviolet;
-        position: absolute;
+    background-color: blueviolet;
+    position: absolute;
     margin-top: 1rem;
     margin-left: -5rem;
     border-radius: 5px;
@@ -90,36 +89,41 @@
     margin-left: 1.5rem;
 }
 
-#profile-avatar{
+#profile-avatar {
     width: 3rem;
     height: 3rem;
     border-radius: 50%;
 }
 
-#post-user-info{
+#post-user-info {
     display: flex;
     font-size: 1.1rem;
     font-weight: bold;
     gap: 1rem;
     padding: 10px;
 }
-#post-time{
+
+#post-time {
     font-size: 14px;
     font-weight: 400;
     margin-top: 3px;
 }
-#post-user-username{
+
+#post-user-username {
     position: absolute;
     margin-top: -2rem;
     margin-left: 4.3rem;
 }
-#post-content{
-    padding:10px;
+
+#post-content {
+    padding: 10px;
 }
-#user-name{
+
+#user-name {
     display: flex;
     gap: 5px;
 }
+
 /* design for mobile */
 @media(max-width:480px) {
     #explore-card {
