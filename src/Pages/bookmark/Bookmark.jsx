@@ -5,7 +5,6 @@ import LeftSideBar from "../../Components/leftSideBar/LeftSideBar";
 import RightSideBar from "../../Components/rightSideBar/RightSideBar";
 import { useBookmark } from '../../Context/bookmark-context';
 import BookmarkCard from '../../Components/card/BookmarkCard';
-// import {GoBookmarkFill} from  'react-icons/'
 export default function Bookmark() {
   const { bookmarkPost } = useBookmark();
   return (
@@ -18,7 +17,7 @@ export default function Bookmark() {
           {
             bookmarkPost.length ?
               bookmarkPost.map((data) => <BookmarkCard data={data} />) :
-              <span id='no-bookmark'>No Bokmark </span>
+              <span id='no-bookmark'>No Bookmark </span>
           }
         </div>
       </div>
