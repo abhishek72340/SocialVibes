@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import './PostTheme.css';
-import me from '../../images/me.jpg'
 import ExploreCard from '../../Components/card/ExploreCard'
 import { MdPhotoSizeSelectActual } from 'react-icons/md';
 import { BsEmojiSmileFill } from 'react-icons/bs';
@@ -23,17 +22,17 @@ export default function PostTheme() {
     (post) =>
       isFollow(post?.username) || post?.username === userDetails?.username
   );
-  let filteredPosts = homeData;
+ 
   if (filter === "trending") {
-    filteredPosts = homeData.sort(
+    homeData.sort(
       (post1, post2) => post2?.likes?.likeCount - post1?.likes?.likeCount
     );
   } else if (filter === "latest") {
-    filteredPosts = homeData.sort(
+     homeData.sort(
       (post1, post2) => new Date(post2?.createdAt) - new Date(post1?.createdAt)
     );
   } else if (filter === "oldest") {
-    filteredPosts = homeData.sort(
+    homeData.sort(
       (post1, post2) => new Date(post1?.createdAt) - new Date(post2?.createdAt)
     );
   }
