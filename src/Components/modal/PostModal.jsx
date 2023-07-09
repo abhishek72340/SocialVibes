@@ -1,6 +1,5 @@
 import './PostModal.css';
 import { useState } from 'react';
-import me from '../../images/me.jpg'
 import { MdPhotoSizeSelectActual } from 'react-icons/md';
 import { BsEmojiSmileFill } from 'react-icons/bs';
 import {
@@ -21,15 +20,11 @@ export function PostModal() {
   const [textInput, setTextInput] = useState('')
   const { isOpen, onOpen, onClose } = useDisclosure()
   const { NewPost } = useExplore();
-  const { detail,userDetails } = useAuth();
-    const textareaChangeHandler = (e) => {
+  const { detail, userDetails } = useAuth();
+  const textareaChangeHandler = (e) => {
     setTextInput(e.target.value)
   };
 
-  const postHandler=()=>{
-   
-  }
-  
   return (
     <>
       <Button onClick={onOpen} id='post-modal'>Post</Button>
@@ -51,7 +46,7 @@ export function PostModal() {
           </ModalBody>
 
           <ModalFooter>
-        <Button id='modal-post-button'  mr={3} onClick={() => NewPost({ username: detail?.username, content: textInput })}>
+            <Button id='modal-post-button' mr={3} onClick={() => NewPost({ username: detail?.username, content: textInput })}>
               Post
             </Button>
 
