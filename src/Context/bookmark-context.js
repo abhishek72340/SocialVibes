@@ -13,7 +13,7 @@ const BookmarkProvider = ({ children }) => {
             const {data} = await axios.post(`/api/users/bookmark/${postId}`, {}, {
                 headers: { authorization: token },
             });
-            // console.log(res)
+            
             setBookmarkPost(data.bookmarks)
             notifySuccess('added successfully')
          

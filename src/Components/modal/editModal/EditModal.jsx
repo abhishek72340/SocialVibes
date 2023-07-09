@@ -18,6 +18,7 @@ import {
 import { AiOutlineEdit } from 'react-icons/ai';
 
 import { useExplore } from '../../../Context/explore-context';
+import { useAuth } from '../../../Context/auth-context';
 export default function EditModal({ data }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [content, setContent] = useState(data.content)
@@ -25,6 +26,7 @@ export default function EditModal({ data }) {
   const initialRef = React.useRef(null)
   const finalRef = React.useRef(null)
   const { EditPost } = useExplore();
+  const {userDetails}=useAuth();
 
   const textareaChangeHandler = (e) => {
     setContent(e.target.value)
@@ -41,7 +43,7 @@ export default function EditModal({ data }) {
       >
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>What's Happening</ModalHeader>
+          <ModalHeader>Edit Post</ModalHeader>
           <ModalCloseButton />
           <ModalBody pb={6} id='modal-profile-input-field'>
 
@@ -50,7 +52,7 @@ export default function EditModal({ data }) {
               <span><BsEmojiSmileFill /></span>
             </div>
 
-            <span><img src={me} alt="img" id='modal-profile' /></span>
+            <span><img src={userDetails?.avatarUrl} alt="img" id='modal-profile' /></span>
             <textarea name="" id="modal-post-input-text" cols="30" rows="10" placeholder='whats happening' value={content} onChange={textareaChangeHandler}></textarea>
           </ModalBody>
 

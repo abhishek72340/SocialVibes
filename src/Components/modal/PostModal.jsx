@@ -47,7 +47,7 @@ export function PostModal() {
           </ModalBody>
 
           <ModalFooter>
-            <Button id='modal-post-button' mr={3} onClick={() => NewPost({ username: detail.username, content: textInput })}>
+            <Button id='modal-post-button' mr={3} onClick={() => NewPost({ username: detail?.username, content: textInput })}>
               Post
             </Button>
 

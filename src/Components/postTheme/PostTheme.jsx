@@ -52,8 +52,8 @@ export default function PostTheme() {
 
           </div>
           <div id='profile-add'>
-            <span><img src={me} alt="prifle" id='add-post-profile' /></span>
-            <textarea placeholder='whats happening' id="add-post-input-filed" cols="30" rows="10" onChange={textareaChangeHandler}></textarea>
+            <span><img src={userDetails?.avatarUrl} alt="profile" id='add-post-profile' /></span>
+            <textarea placeholder='whats happening...' id="add-post-input-filed" className='text-red-500' cols="30" rows="10" onChange={textareaChangeHandler}></textarea>
           </div>
         </div>
 

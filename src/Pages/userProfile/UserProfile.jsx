@@ -9,7 +9,6 @@ import { FiLogOut } from 'react-icons/fi';
 import { useExplore } from '../../Context/explore-context';
 import { useUser } from '../../Context/user-context';
 import ExploreCard from '../../Components/card/ExploreCard'
-import Explore from '../explore/Explore';
 import { useAuth } from '../../Context/auth-context';
 export default function UserProfile() {
   const {explorePost}=useExplore();
@@ -20,10 +19,7 @@ const {userDetails}=useAuth();
   const {username}=useParams();
   const post = explorePost.filter((item) => item.username === username);
   const userProfile = user.find((item) => item.username === username);
-  console.log('userprofile',userProfile)
-  console.log('username',username)
-  console.log('user',user)
-
+ 
   return (
     <div>
       <span> <Navbar /></span>
@@ -38,7 +34,7 @@ const {userDetails}=useAuth();
               <span id='user-name-highlight'>{userProfile?.firstName}{userProfile?.lastName}</span>
             </div>
             <div id='edit-button-icon'> 
-            {userDetails.username===username?<ProfileModal userProfile={userProfile} />:<button>Follow</button>}
+            {userDetails?.username===username?<ProfileModal userProfile={userProfile} />:<button>Follow</button>}
               <span id='icon'><FiLogOut /></span>
             </div>
           </div>

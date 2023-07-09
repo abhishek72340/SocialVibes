@@ -34,6 +34,7 @@ const ExploreProvider = ({ children }) => {
                 { postData: post },
                 { headers: { authorization: token } }
             );
+            getExplorePost();
             setExplorePost(data.posts);
             notifySuccess("post added");
         } catch (error) {
@@ -54,11 +55,13 @@ const ExploreProvider = ({ children }) => {
                     headers: { authorization: token },
                 }
             );
+
             setExplorePost(data.posts);
         } catch (err) {
-            console.log(err);
+            alert(err);
         }
     };
+
 
     //Delee Post
     const DeletePost = async (postId) => {
@@ -72,11 +75,11 @@ const ExploreProvider = ({ children }) => {
 
         } catch (err) {
             console.log(err);
-            
+
         }
     };
     return (
-        <exploreContext.Provider value={{DeletePost, EditPost, NewPost, explorePost, isLoading, getExplorePost }}>
+        <exploreContext.Provider value={{ DeletePost, EditPost, NewPost, explorePost, isLoading, getExplorePost }}>
             {children}
         </exploreContext.Provider>
     )

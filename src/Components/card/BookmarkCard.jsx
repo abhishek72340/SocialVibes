@@ -13,7 +13,6 @@ import { useExplore } from '../../Context/explore-context';
 import EditModal from '../modal/editModal/EditModal';
 
 export default function BookmarkCard({ data }) {
-    console.log('data', data);
     const [commentModal, setCommentModal] = useState(false)
     const [edit, setEdit] = useState(false);
     const { deleteBookmarkPost } = useBookmark();
