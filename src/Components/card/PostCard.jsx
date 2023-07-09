@@ -32,7 +32,7 @@ export default function PostCard({ data }) {
         setEdit(!edit)
     };
     return (
-        <div key={data._id} id='explore-card'>
+        <div key={data._id} id='explore-card'  >
 
             <div id='explore-data'>
                 <div id='edit-icon'>
@@ -46,7 +46,7 @@ export default function PostCard({ data }) {
                         </div> : null}
                 </div>
 
-                <div id='post-user-info'>
+                <div id='post-user-info'  onClick={() => navigate(`/userprofile/${data?.username}`)}>
                     <img src={findUser(data.username)?.avatarUrl} alt="profile" id='profile-avatar' onClick={() => navigate(`/userprofile/${data?.username}`)} />
                     <div id='user-name'>
                         <span>{findUser(data.username).firstName}</span>
@@ -54,10 +54,10 @@ export default function PostCard({ data }) {
                     </div>
                     <span id='post-time'>{new Date(data.updatedAt).toDateString()}</span>
                 </div>
-                <span id='post-user-username'>@{data.username}</span><br />
-                <span id='post-content'>{data.content}</span>
+                <span id='post-user-username'  onClick={() => navigate(`/userprofile/${data?.username}`)}>@{data.username}</span><br />
+                <span id='post-content'  onClick={() => navigate(`/userprofile/${data?.username}`)}>{data.content}</span>
 
-                <span onClick={() => navigate(`/userprofile/${data?.username}`)}>{data.url && <img src={data.mediaURL} alt='media' id='post-media' />}</span>
+                <span  onClick={() => navigate(`/userprofile/${data?.username}`)}>{data.url && <img src={data.mediaURL} alt='media' id='post-media' />}</span>
                 <div id='explore-post-icon'>
 
 

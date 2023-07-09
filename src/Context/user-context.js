@@ -6,11 +6,9 @@ const userContext = createContext();
 
 const UserProvider = ({ children }) => {
     const [user, setUser] = useState([]);
-    // const { notifyError } = useToast();
     const { userDetails, setUserDetails } = useAuth();
     const { notifySuccess } = useToast();
-
-
+    console.log(user)
 
     const getUser = async () => {
         try {
@@ -37,7 +35,7 @@ const UserProvider = ({ children }) => {
                 }
             );
             notifySuccess("profile updated successfully");
-            user();
+            getUser();
                   } catch (err) {
             alert(err);
         }

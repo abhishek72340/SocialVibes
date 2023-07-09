@@ -42,7 +42,7 @@ const {userDetails,userLogout}=useAuth();
           <div id='user-bio'>
             <span>@{userProfile?.username}</span>
             <div id='bio-link'><span>{userProfile?.bio}</span>
-              <a href="https://github.com/abhishek72340">github.com/abhishek72340</a>
+              <a href={userProfile?.website}>{userProfile?.website}</a>
               <div id='following'>
                 <span>{post?.length} Post</span>
                 <span>{userProfile?.following?.length} Following</span>

@@ -1,6 +1,5 @@
 import React ,{useState} from 'react'
 import './ProfileModal.css';
-import me from '../../../images/me.jpg'
 import {
     useDisclosure,
     Button,
@@ -25,10 +24,12 @@ export default function ProfileModal({userProfile}) {
     const initialRef = React.useRef(null)
     const finalRef = React.useRef(null)
 
+    console.log('userprofile',userProfile)
+
     const {EditProfile} =useUser();
 
     const updatedhandler = () => {
-        EditProfile({ ...userProfile, avatarUrl: avatar, bio: bio, website: website })
+        EditProfile({ ...userProfile, avatarUrl: avatar, bio: bio, website:website,firstName:firstName,lastName:lastName })
        
     }
     const mediahandler = (e) => {

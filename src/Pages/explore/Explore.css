@@ -21,6 +21,7 @@
     width: 42vw;
     border: 1px solid lightgray;
     margin-left: -2.8rem;
+    cursor: pointer;
 }
 
 #post-media {
