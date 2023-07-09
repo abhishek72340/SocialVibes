@@ -33,7 +33,7 @@ export default function EditModal({ data }) {
   }
   return (
     <>
-      <Button onClick={onOpen} style={{ backgroundColor: 'blueviolet', color: 'white' }}><AiOutlineEdit /></Button>
+      <Button onClick={onOpen} style={{backgroundColor:'white'}}><AiOutlineEdit /></Button>
 
       <Modal
         initialFocusRef={initialRef}

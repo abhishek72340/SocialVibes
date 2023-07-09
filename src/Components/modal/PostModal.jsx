@@ -25,6 +25,10 @@ export function PostModal() {
     setTextInput(e.target.value)
   };
 
+  const upload=()=>{
+    NewPost({ username: detail?.username, content: textInput })
+    setTextInput('')
+  }
   return (
     <>
       <Button onClick={onOpen} id='post-modal'>Post</Button>
@@ -42,11 +46,11 @@ export function PostModal() {
             </div>
 
             <span><img src={userDetails?.avatarUrl} alt="img" id='modal-profile' /></span>
-            <textarea name="" id="modal-post-input-text" cols="30" rows="10" placeholder='whats happening' onChange={textareaChangeHandler}></textarea>
+            <textarea name="" value={textInput} id="modal-post-input-text" cols="30" rows="10" placeholder='whats happening' onChange={textareaChangeHandler}></textarea>
           </ModalBody>
 
           <ModalFooter>
-            <Button id='modal-post-button' mr={3} onClick={() => NewPost({ username: detail?.username, content: textInput })}>
+            <Button id='modal-post-button' mr={3} onClick={upload }>
               Post
             </Button>
 

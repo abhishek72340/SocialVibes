@@ -8,6 +8,7 @@ import { useAuth } from '../../Context/auth-context';
 import { useUser } from '../../Context/user-context';
 export default function PostTheme() {
   const [filter, setFilter] = useState("latest");
+  // const [textArea,setTextArea]=useState('')
   const [textInput, setTextInput] = useState('')
   const { NewPost } = useExplore();
   const { detail, userDetails } = useAuth();
@@ -36,7 +37,11 @@ export default function PostTheme() {
       (post1, post2) => new Date(post1?.createdAt) - new Date(post2?.createdAt)
     );
   }
+const postUpload=()=>{
+  setTextInput('')
+  NewPost({ username: detail?.username, content: textInput })
 
+}
   return (
     <div id='post-theme'>
       <div id='post-theme-data'>
@@ -47,12 +52,12 @@ export default function PostTheme() {
               <span><MdPhotoSizeSelectActual /></span>
               <span><BsEmojiSmileFill /></span>
             </div>
-            <span id='post-theme-post-button' onClick={() => NewPost({ username: detail?.username, content: textInput })}>Post</span>
+            <span id='post-theme-post-button' onClick={postUpload }>Post</span>
 
           </div>
           <div id='profile-add'>
             <span><img src={userDetails?.avatarUrl} alt="profile" id='add-post-profile' /></span>
-            <textarea placeholder='whats happening...' id="add-post-input-filed"  cols="30" rows="10" onChange={textareaChangeHandler}></textarea>
+            <textarea  value={textInput}  placeholder='whats happening...' id="add-post-input-filed"  cols="30" rows="10" onChange={textareaChangeHandler}></textarea>
           </div>
         </div>
 
