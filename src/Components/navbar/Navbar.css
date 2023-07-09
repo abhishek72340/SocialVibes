@@ -26,29 +26,44 @@
 
 #navbar-theme {
     position: fixed;
-     top: 0;
+    top: 0;
     width: 100vw;
     z-index: 1;
 }
-#user-search{
+
+#user-search {
     display: flex;
     justify-content: center;
     align-items: center;
 
+
 }
-#search-by-username{
+
+#search-by-username {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: bold;
     width: 30vw;
     height: 40vh;
     background-color: transparent;
     position: absolute;
-    top:80%;
+    top: 100%;
+
+
+}
+
+#avatar-username {
+    display: flex;
+    gap: 10px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 10rem;
 
 }
 

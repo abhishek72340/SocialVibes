@@ -52,13 +52,12 @@ export default function Navbar() {
               {
                 input && filteredUsername.length > 0 ? filteredUsername.map((item) => {
                   return (
-                    <div id='blur-search-field'>
-                      <div key={item._id} onClick={() => navigate(`/userprofile/${item?.username}`)}  >
-                        <span ><img src={item.avatarUrl} alt="profile" className='h-[40px] w-[40px] rounded-full' />
+                      <div key={item._id} onClick={() => navigate(`/userprofile/${item?.username}`)} id='blur-search-field'  >
+                        <span id='avatar-username' ><img src={item.avatarUrl} alt="profile" className='h-[30px] w-[30px] rounded-full' />
                           {item.username}
                         </span>
                       </div>
-                    </div>
+                    
                   )
                 }) : null
               }
