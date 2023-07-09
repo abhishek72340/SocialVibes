@@ -5,7 +5,6 @@ import App from "./App";
 import { makeServer } from "./server";
 import { ChakraProvider } from '@chakra-ui/react'
 import { BrowserRouter } from 'react-router-dom';
-// import { SuggestionProvider } from './Context/suggestion-context'
 import { ExploreProvider } from './Context/explore-context'
 import { BookmarkProvider } from "./Context/bookmark-context";
 import { AuthProvider } from './Context/auth-context';
@@ -26,9 +25,7 @@ ReactDOM.render(
               <UserProvider>
                 <FavouriteProvider>
                   <BookmarkProvider>
-                    {/* <SuggestionProvider> */}
-                      <App />
-                    {/* </SuggestionProvider> */}
+                    <App />
                   </BookmarkProvider>
                 </FavouriteProvider>
               </UserProvider>

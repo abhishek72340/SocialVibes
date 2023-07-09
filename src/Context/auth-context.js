@@ -65,7 +65,7 @@ const AuthProvider = ({ children }) => {
                 
             }
             if (data) {
-                navigate('welcome')
+                navigate('/welcome')
                
             }
         }
@@ -103,8 +103,7 @@ const AuthProvider = ({ children }) => {
                     confirmPassword: userData.confirmPassword,
 
                 });
-                console.log(data)
-                localStorage.setItem('token', JSON.stringify(data.encodedToken))
+                             localStorage.setItem('token', JSON.stringify(data.encodedToken))
                 localStorage.setItem('foundUser', JSON.stringify(data.createdUser))
 
                 if (data) {
@@ -137,13 +136,7 @@ const AuthProvider = ({ children }) => {
         }
     },[userToken]);
 
-//     useEffect(() => {
-//         const token = localStorage.getItem('encodedToken')
-//         if (token) {
-//             const foundUser = JSON.parse(localStorage.getItem('foundUser'))
-//             setUserDetails(foundUser);
-//     }
-// },[])
+
     return (
         <authContext.Provider value={{setUserDetails, userData, signupInputChange, signupHandler, userLogout, userToken, detail, loginHandler, LoginDataHandler, userDetails, applyDummyData }}>
             {children}
