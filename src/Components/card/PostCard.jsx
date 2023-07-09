@@ -39,7 +39,7 @@ export default function PostCard({data}){
                 {data.username === userDetails.username ? <span onClick={editHandler}><BsThreeDots /></span> : null}
 
                 {data.username === userDetails.username ?
-                    <div> {edit && <div id='edit-modal'>
+                    <div> {edit && <div className='w-[7rem] h-[7rem] absolute ml-[-3rem] mt-4'>
                         {data.username === userDetails.username ? <span ><EditModal data={data} /></span> : null}
                         {data.username === userDetails.username ? <span onClick={() => DeletePost(data._id)}><MdDeleteOutline id='dlt-icon' onClick={editHandler} /></span> : null}
                     </div>}
