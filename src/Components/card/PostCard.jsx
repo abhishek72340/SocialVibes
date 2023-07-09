@@ -57,7 +57,7 @@ export default function PostCard({data}){
             <span id='post-user-username'>@{data.username}</span><br />
             <span id='post-content'>{data.content}</span>
 
-            <span onClick={() => navigate(`/userprofile/${data?.username}`)}><img src={data.mediaURL} alt='media' id='post-media' /></span>
+            <span onClick={() => navigate(`/userprofile/${data?.username}`)}>{data.url && <img src={data.mediaURL} alt='media' id='post-media' />}</span>
             <div id='explore-post-icon'>
 
 

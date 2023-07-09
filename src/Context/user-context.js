@@ -71,7 +71,7 @@ const UserProvider = ({ children }) => {
             setUserDetails(data.user);
             notifySuccess("followed user");
         } catch (error) {
-            alert(error);
+            console.log(error);
         }
     };
 

@@ -26,7 +26,12 @@ export default function Navbar() {
   let filteredUsername = user.filter(data => data.username.toLowerCase().includes(input.toLocaleLowerCase()))
   if (filteredUsername.length === 0) {
     filteredUsername = [];
-  }
+  };
+
+  const searchHandler=(item)=>{
+    navigate(`/userprofile/${item?.username}`)
+    setInput('')
+     };
 
   return (
     <>
@@ -50,9 +55,9 @@ export default function Navbar() {
             input &&
             <div id='search-by-username'>
               {
-                input && filteredUsername.length > 0 ? filteredUsername.map((item) => {
+                input && filteredUsername.length !== 0 ? filteredUsername.map((item) => {
                   return (
-                      <div key={item._id} onClick={() => navigate(`/userprofile/${item?.username}`)} id='blur-search-field'  >
+                      <div key={item._id} onClick={()=>searchHandler(item) } id='blur-search-field'  >
                         <span id='avatar-username' ><img src={item.avatarUrl} alt="profile" className='h-[30px] w-[30px] rounded-full' />
                           {item.username}
                         </span>

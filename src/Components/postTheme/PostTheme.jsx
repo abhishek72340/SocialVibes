@@ -48,16 +48,16 @@ export default function PostTheme() {
               <span><MdPhotoSizeSelectActual /></span>
               <span><BsEmojiSmileFill /></span>
             </div>
-            <span id='post-theme-post-button' onClick={() => NewPost({ username: detail.username, content: textInput })}>Post</span>
+            <span id='post-theme-post-button' onClick={() => NewPost({ username: detail?.username, content: textInput })}>Post</span>
 
           </div>
           <div id='profile-add'>
             <span><img src={userDetails?.avatarUrl} alt="profile" id='add-post-profile' /></span>
-            <textarea placeholder='whats happening...' id="add-post-input-filed" className='text-red-500' cols="30" rows="10" onChange={textareaChangeHandler}></textarea>
+            <textarea placeholder='whats happening...' id="add-post-input-filed"  cols="30" rows="10" onChange={textareaChangeHandler}></textarea>
           </div>
         </div>
 
-{/* FIlter */}
+        {/* FIlter */}
         <div className="right cursor-pointer mt-[12rem]  ">
           <div className="filter-options  z-5 ">
             <select
@@ -72,7 +72,7 @@ export default function PostTheme() {
           </div>
         </div>
 
-        <div id='upload-post-theme'>{<ExploreCard post={homeData}  />}</div>
+        <div id='upload-post-theme'>{<ExploreCard post={homeData} />}</div>
       </div>
 
     </div>

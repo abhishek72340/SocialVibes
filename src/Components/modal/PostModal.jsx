@@ -18,14 +18,18 @@ import {
 import { useExplore } from '../../Context/explore-context';
 import { useAuth } from '../../Context/auth-context';
 export function PostModal() {
-  const { isOpen, onOpen, onClose } = useDisclosure()
   const [textInput, setTextInput] = useState('')
+  const { isOpen, onOpen, onClose } = useDisclosure()
   const { NewPost } = useExplore();
-  const { detail } = useAuth();
-
-  const textareaChangeHandler = (e) => {
+  const { detail,userDetails } = useAuth();
+    const textareaChangeHandler = (e) => {
     setTextInput(e.target.value)
+  };
+
+  const postHandler=()=>{
+   
   }
+  
   return (
     <>
       <Button onClick={onOpen} id='post-modal'>Post</Button>
@@ -42,12 +46,12 @@ export function PostModal() {
               <span><BsEmojiSmileFill /></span>
             </div>
 
-            <span><img src={me} alt="img" id='modal-profile' /></span>
+            <span><img src={userDetails?.avatarUrl} alt="img" id='modal-profile' /></span>
             <textarea name="" id="modal-post-input-text" cols="30" rows="10" placeholder='whats happening' onChange={textareaChangeHandler}></textarea>
           </ModalBody>
 
           <ModalFooter>
-            <Button id='modal-post-button' mr={3} onClick={() => NewPost({ username: detail?.username, content: textInput })}>
+        <Button id='modal-post-button'  mr={3} onClick={() => NewPost({ username: detail?.username, content: textInput })}>
               Post
             </Button>
 

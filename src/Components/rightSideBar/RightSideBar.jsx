@@ -13,11 +13,7 @@ export default function RightSideBar() {
     <div>
       <div id='right-sidebar-theme'>
 
-        {/* <div id='right-sidebar-button'>
-          <button className='button'>Trending</button>
-          <button className='button'>Latest</button>
-        </div> */}
-        <span id='suggestion-for-you'>Suggestions for you</span>
+             <span id='suggestion-for-you'>Suggestions for you</span>
         <Suggestion />
 
       </div>
