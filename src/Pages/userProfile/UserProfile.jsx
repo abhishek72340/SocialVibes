@@ -13,7 +13,7 @@ import { useAuth } from '../../Context/auth-context';
 export default function UserProfile() {
   const {explorePost}=useExplore();
   const {user} =useUser();
-const {userDetails}=useAuth();
+const {userDetails,userLogout}=useAuth();
 
 
   const {username}=useParams();
@@ -34,8 +34,8 @@ const {userDetails}=useAuth();
               <span id='user-name-highlight'>{userProfile?.firstName}{userProfile?.lastName}</span>
             </div>
             <div id='edit-button-icon'> 
-            {userDetails?.username===username?<ProfileModal userProfile={userProfile} />:<button>Follow</button>}
-              <span id='icon'><FiLogOut /></span>
+            {userDetails?.username===username?<ProfileModal userProfile={userProfile} />:<button id='follow-btn'>Follow</button>}
+              <span id='icon' onClick={userLogout}><FiLogOut /></span>
             </div>
           </div>
          

@@ -93,3 +93,8 @@
     align-items: center;
     margin-left: 3rem;
 }
+#follow-btn{
+    margin-top: -1rem;
+    cursor: pointer;
+  
+}

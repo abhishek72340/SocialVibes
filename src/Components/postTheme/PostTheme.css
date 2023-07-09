@@ -17,6 +17,7 @@
     justify-content: center;
     width: 40vw;
     height: 100vh;
+  
 }
 
 #add-post-block {
@@ -24,6 +25,7 @@
     height: 30vh;
     border: 1px solid lightgray;
     position: absolute;
+    margin-left:-2rem;
 }
 
 #profile-add {

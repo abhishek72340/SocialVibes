@@ -61,7 +61,7 @@ export default function PostTheme() {
         <div className="right cursor-pointer mt-[12rem]  ">
           <div className="filter-options  z-5 ">
             <select
-              className="bg-cyan-800 text-white p-1"
+              className="bg-cyan-800 text-white p-1 ml-[-2.3rem] absolute"
               value={filter}
               onChange={(e) => setFilter(e.target.value)}
             >
