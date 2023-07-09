@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import me from '../../../images/me.jpg'
 import { MdPhotoSizeSelectActual } from 'react-icons/md';
 import { BsEmojiSmileFill } from 'react-icons/bs';
 import {
