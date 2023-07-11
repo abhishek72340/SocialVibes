@@ -128,7 +128,7 @@
 
     #explore-data {
         margin-left: -11rem;
-        box-shadow: 1px 1px 5px lightgray;
+        border: 1px solid lightgray;
     }
 }
 
@@ -138,13 +138,13 @@
         margin-top: 6rem;
         width: 70vw;
         font-size: 1rem;
-        box-shadow: 0px 0px 0px lightgray;
+        border: 1px solid lightgray;
 
     }
 
     #explore-data {
         margin-left: -5rem;
-        box-shadow: 1px 1px 5px lightgray;
+        border: 1px solid lightgray;
     }
 
 }

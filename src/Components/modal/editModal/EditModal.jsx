@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { MdPhotoSizeSelectActual } from 'react-icons/md';
 import { BsEmojiSmileFill } from 'react-icons/bs';
+import {useToast} from '../../../Context/toastify-context'
 import {
   useDisclosure,
   Button,
@@ -26,9 +27,16 @@ export default function EditModal({ data }) {
   const finalRef = React.useRef(null)
   const { EditPost } = useExplore();
   const {userDetails}=useAuth();
+  const {notifySuccess}=useToast();
 
   const textareaChangeHandler = (e) => {
     setContent(e.target.value)
+  };
+  const editPostHandler=()=>{
+     EditPost({ content: content }, data._id)
+     notifySuccess('updated successfully')
+     setContent('');
+
   }
   return (
     <>
@@ -56,7 +64,7 @@ export default function EditModal({ data }) {
           </ModalBody>
 
           <ModalFooter>
-            <Button colorScheme='blue' mr={3} onClick={() => EditPost({ content: content }, data._id)}>
+            <Button colorScheme='blue' mr={3} onClick={editPostHandler}>
               Update
             </Button>
           </ModalFooter>
